@@ -1,0 +1,53 @@
+.uz-custom-textarea-group {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  box-sizing: border-box;
+
+  &__label {
+    font-size: 13px;
+    font-weight: 500;
+    color: #94a3b8;
+    margin-bottom: 2px;
+  }
+
+  &__field {
+    width: 100%;
+    min-height: 100px;
+    padding: 12px 14px;
+    background-color: #1e293b !important;
+    border: 1.5px solid #334155 !important;
+    border-radius: 8px !important;
+    color: #ffffff !important;
+    font-size: 14px;
+    line-height: 1.5;
+    outline: none;
+    box-sizing: border-box;
+    transition:
+      border-color 0.2s,
+      box-shadow 0.2s;
+    resize: none !important; // Foydalanuvchi o'zi tortib o'zgartirolmaydi
+    overflow: hidden; // Scroll bar ko'rinmasligi uchun
+
+    &::placeholder {
+      color: #64748b;
+    }
+
+    &:hover:not(:disabled) {
+      border-color: #475569 !important;
+    }
+
+    &:focus {
+      border-color: #22d3ee !important;
+      background-color: #1a2438 !important;
+      box-shadow: 0 0 0 3px rgba(34, 211, 238, 0.15) !important;
+    }
+
+    &:disabled {
+      opacity: 0.6;
+      background-color: #0f172a !important;
+      cursor: not-allowed;
+    }
+  }
+}

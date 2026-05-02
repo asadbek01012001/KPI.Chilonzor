@@ -1,0 +1,37 @@
+.custom_formik_input_wrapper {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+
+  .custom_formik_input_label {
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .error_label {
+    color: red;
+  }
+
+  .custom_formik_input {
+    width: 100%;
+    height: 50px;
+    outline: none;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    font-size: 18px;
+  }
+
+  .error_input_border {
+    border: 2px solid red;
+  }
+
+  .custom_formik_error_label {
+    font-size: 14px;
+    color: red;
+  }
+}

@@ -1,0 +1,33 @@
+.header_select_language_wrapper {
+  .uz-custom-select-group.header-language-select {
+    .uz-custom-select-group__field {
+      background: #121b31;
+      border: 1px solid #121b31;
+      color: white;
+      height: 50px;
+      font-size: 18px;
+      width: 120px;
+
+      option {
+        color: #fff;
+        background: #121b31;
+        border: 1px solid #121b31;
+      }
+    }
+
+    // O'ngdagi arrow
+    .uz-custom-select-group__arrow {
+      color: white;
+      right: 8px;
+      top: 35px;
+      width: 26px;
+      height: 26px;
+    }
+
+    &.uz-custom-select-group--has-icon {
+      .uz-custom-select-group__field {
+        padding-left: 50px;
+      }
+    }
+  }
+}

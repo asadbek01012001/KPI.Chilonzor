@@ -1,0 +1,40 @@
+.sidebar_item_second {
+  width: 264;
+  min-height: 40;
+  padding-top: 8px;
+  padding-right: 12px;
+  padding-bottom: 8px;
+  padding-left: 12px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+  opacity: 1;
+  border-radius: 8px;
+  color: #ffffff80;
+  margin: 2px 0;
+  cursor: pointer;
+
+  transition: all 0.2s ease-in-out;
+
+  .sidebar_item_secund_custom_circle {
+    width: 10px;
+
+    .custom_circle {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #6a8bfd;
+    }
+  }
+
+  &:hover {
+    background: #24314d;
+  }
+
+  &.active {
+    background: #24314d;
+    color: #ffffff;
+  }
+}

@@ -1,0 +1,22 @@
+.dashboard_map_layout {
+  width: 100%;
+  height: 100%;
+
+  padding: 20px;
+  border-radius: 10px;
+
+  // background: url("../assets/city-bg.png") center / cover no-repeat;
+
+  .dashboard_map_header {
+    width: 100%;
+  }
+
+  .dashboard_map_sidebar {
+    top: 100px;
+  }
+
+  .dashboard_map_body {
+    width: 100%;
+    height: 100%;
+  }
+}

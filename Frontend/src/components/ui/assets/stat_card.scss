@@ -1,0 +1,60 @@
+.stat-card {
+  background: linear-gradient(180deg, #111a2e, #0c1426);
+  border-radius: 16px;
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: #fff;
+  width: 100%;
+  position: relative;
+
+  &__left {
+    .circle {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &__inner {
+        width: 28px;
+        height: 28px;
+        background: #0c1426;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  &__content {
+    flex: 1;
+
+    h3 {
+      margin: 0;
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    span {
+      font-size: 14px;
+      color: #9fb1ff;
+    }
+  }
+
+  &__icon {
+    font-size: 22px;
+  }
+
+  &.success {
+    .circle {
+      background: conic-gradient(#4cff9f 360deg, #1b2745 0deg);
+    }
+  }
+
+  &.warning {
+    .circle {
+      background: conic-gradient(#ffd84d 360deg, #1b2745 0deg);
+    }
+  }
+}

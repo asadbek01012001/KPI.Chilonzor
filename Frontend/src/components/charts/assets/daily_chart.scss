@@ -1,0 +1,68 @@
+.chart-wrapper {
+  background-color: #0b1421; // To'q fon
+  padding: 2rem;
+  border-radius: 8px;
+  font-family: sans-serif;
+  color: #fff;
+
+  .chart-header {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 1rem;
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      .line {
+        width: 15px;
+        height: 2px;
+        background-color: #00f2c3;
+      }
+      .text {
+        font-size: 14px;
+        color: #9ca3af;
+      }
+    }
+  }
+
+  .custom-tooltip {
+    background-color: #0b1421;
+    border: 1px solid #1f2937;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+
+    .label {
+      margin: 0 0 8px 0;
+      color: #fbbf24; // Oltin rangli sana
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    .value-container {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      .dot {
+        width: 8px;
+        height: 8px;
+        background-color: #00f2c3;
+        border-radius: 50%;
+      }
+
+      .key {
+        color: #9ca3af;
+        font-size: 12px;
+      }
+
+      .value {
+        color: #00f2c3;
+        font-weight: bold;
+        font-size: 14px;
+      }
+    }
+  }
+}

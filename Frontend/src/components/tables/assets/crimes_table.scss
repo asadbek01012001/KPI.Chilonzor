@@ -1,0 +1,122 @@
+$bg-primary: #1e293b;
+$bg-header: #1a2438;
+$bg-subheader: #151e32;
+$bg-row-even: #151e32;
+$bg-row-odd: #1a2438;
+$bg-row-hover: rgba(71, 85, 105, 0.5);
+$border-color: #475569;
+$border-cell: #334155;
+$text-yellow: #facc15;
+$text-emerald: #34d399;
+$text-white: #ffffff;
+$text-slate-200: #e2e8f0;
+$text-slate-400: #94a3b8;
+
+.cr-container {
+  width: 100%;
+  max-height: 100%;
+  overflow: auto;
+  background: $bg-primary;
+  border: 1px solid $border-color;
+  border-radius: 8px;
+}
+
+.cr-simple-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  table-layout: fixed;
+  font-size: 14px;
+
+  th,
+  td {
+    padding: 12px 15px;
+    border: 1px solid $border-cell;
+    text-align: center;
+    word-wrap: break-word;
+    color: $text-yellow;
+  }
+
+  .cr-sticky-col {
+    position: sticky;
+    z-index: 5;
+  }
+
+  // T.R — 50px
+  .cr-col-tr {
+    left: 0;
+    width: 60px;
+    min-width: 60px;
+    max-width: 60px;
+    background: $bg-subheader !important;
+    color: $text-slate-400;
+  }
+
+  // Mahalla nomi — 250px
+  .cr-col-name {
+    left: 50px;
+    width: 500px;
+    min-width: 500px;
+    max-width: 500px;
+    background: $bg-subheader !important;
+    color: $text-emerald;
+    font-weight: 600;
+    text-align: left;
+    border-right: 2px solid $border-color;
+  }
+
+  // Jami — 200px
+  .cr-col-total {
+    width: auto;
+  }
+
+  // Qolgan ustunlar — auto (teng bo'linadi)
+  .cr-col-data {
+    width: auto;
+  }
+
+  thead th {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: $bg-header;
+
+    &.cr-col-tr,
+    &.cr-col-name {
+      z-index: 12;
+    }
+  }
+
+  tbody tr:nth-child(even) {
+    background: $bg-row-even;
+    td:not(.cr-sticky-col) {
+      background: $bg-row-even;
+    }
+  }
+
+  tbody tr:nth-child(odd) {
+    background: $bg-row-odd;
+    td:not(.cr-sticky-col) {
+      background: $bg-row-odd;
+    }
+  }
+
+  tbody tr:hover td {
+    background: $bg-row-hover !important;
+  }
+
+  .is-editing {
+    padding: 0;
+    input {
+      width: 100%;
+      height: 100%;
+      padding: 12px 15px;
+      background: #0f172a;
+      color: $text-white;
+      border: 2px solid $text-yellow;
+      outline: none;
+      box-sizing: border-box;
+      text-align: center;
+    }
+  }
+}

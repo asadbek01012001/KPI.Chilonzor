@@ -1,0 +1,130 @@
+$bg-primary: #1e293b;
+$bg-header: #1a2438;
+$bg-subheader: #151e32;
+$bg-row-even: #151e32;
+$bg-row-odd: #1a2438;
+$bg-row-hover: rgba(71, 85, 105, 0.5);
+
+$border-color: #475569;
+$border-cell: #334155;
+
+$text-yellow: #facc15;
+$text-red: #f87171;
+$text-cyan: #22d3ee;
+$text-cyan-light: #67e8f9;
+$text-emerald: #34d399;
+$text-white: #ffffff;
+$text-slate-200: #e2e8f0;
+$text-slate-300: #cbd5e1;
+$text-slate-400: #94a3b8;
+$text-yellow-300: #fde047;
+
+.rating-card {
+  background-color: $bg-primary;
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid $border-color;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  width: 100%;
+  height: 100%;
+
+  h2 {
+    color: $text-yellow;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+  }
+
+  .table-container {
+    overflow-x: auto;
+    border-radius: 8px;
+    border: 1px solid $border-cell;
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-family: "Inter", sans-serif;
+
+      thead {
+        background-color: $bg-header;
+
+        th {
+          padding: 14px 16px;
+          color: $text-cyan-light;
+          font-weight: 600;
+          font-size: 0.9rem;
+          text-transform: uppercase;
+          border-bottom: 2px solid $border-color;
+        }
+      }
+
+      tbody {
+        tr {
+          transition: background-color 0.2s ease;
+
+          &:nth-child(even) {
+            background-color: $bg-row-even;
+          }
+          &:nth-child(odd) {
+            background-color: $bg-row-odd;
+          }
+
+          &:hover {
+            background-color: $bg-row-hover;
+          }
+
+          td {
+            padding: 12px 16px;
+            color: $text-slate-200;
+            border-bottom: 1px solid $border-cell;
+            font-size: 0.95rem;
+
+            &.rank-cell {
+              color: $text-yellow-300;
+              font-weight: bold;
+            }
+
+            &.score-cell {
+              color: $text-emerald;
+              font-weight: 600;
+            }
+
+            &.mahalla-cell {
+              color: $text-white;
+              font-weight: 500;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap; // Mobil versiyada qatordan tushishi uchun
+  gap: 10px;
+
+  h2 {
+    margin-bottom: 0; // Header ichida marginni nolga tushiramiz
+  }
+
+  .total-score-badge {
+    background-color: $bg-subheader;
+    color: $text-cyan;
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: 1px solid $border-color;
+    font-size: 0.95rem;
+
+    strong {
+      color: $text-yellow;
+      margin-left: 5px;
+      font-size: 1.1rem;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+.sidebar_wrapper {
+  width: 100%;
+  height: 100%;
+
+  .sidebar_wrapper_header {
+    width: 100%;
+    height: 80px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .sidebar_wrapper_body {
+    padding: 10px 20px;
+    height: calc(100% - 180px);
+    overflow: hidden;
+    overflow-y: auto;
+  }
+
+  .sidebar_wrapper_footer {
+    width: 100%;
+    height: 100px;
+    padding: 0 20px;
+  }
+}

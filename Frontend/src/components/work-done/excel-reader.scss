@@ -1,0 +1,742 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Syne:wght@400;600;700&display=swap");
+
+$bg: #0f1117;
+$surface: #181c27;
+$surface2: #1e2336;
+$border: #2a2f45;
+$accent: #4f8ef7;
+$accent2: #7c5cbf;
+$text: #e8ecf4;
+$text-dim: #6b7394;
+$header-bg: #12151f;
+$header2-bg: #14182a;
+$frozen-bg: #161a28;
+$frozen-alt: #181e2e;
+$frozen-hover: #1c2240;
+$frozen-border: #3a4060;
+$row-hover: rgba(79, 142, 247, 0.07);
+$row-alt: rgba(255, 255, 255, 0.018);
+
+// ── Frozen column widths — these values control BOTH the width AND left offsets
+// They must be identical in th, th2, td — that's what locks sticky positions
+$w-rownum: 60px;
+$w-f1: 140px; // №
+$w-f2: 340px; // Ko'rsatkich  (wider to fit long text)
+$w-f3: 120px; // Jami
+$w-rest: 150px; // scrollable columns
+
+// Cumulative left offsets — derived from widths above
+$left-f1: $w-rownum;
+$left-f2: $w-rownum + $w-f1;
+$left-f3: $w-rownum + $w-f1 + $w-f2;
+
+$row1-h: 50px;
+$row2-h: 46px;
+
+// ── Mixin: lock a cell to exact width ─────────────────────────────────────────
+@mixin lock-width($w) {
+  width: $w;
+  min-width: $w;
+  max-width: $w;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+// ── Root ──────────────────────────────────────────────────────────────────────
+.excel-reader {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: $bg;
+  font-family: "JetBrains Mono", monospace;
+  color: $text;
+  overflow: hidden;
+
+  // ── Header ──────────────────────────────────────────────────────────────────
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 32px;
+    background: $header-bg;
+    border-bottom: 1px solid $border;
+    flex-shrink: 0;
+    gap: 16px;
+
+    &-left {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    &-icon {
+      width: 42px;
+      height: 42px;
+      background: linear-gradient(135deg, $accent, $accent2);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+
+    &-title {
+      font-family: "Syne", sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: $text;
+      letter-spacing: -0.4px;
+    }
+
+    &-subtitle {
+      font-size: 12px;
+      color: $text-dim;
+      margin-top: 3px;
+    }
+  }
+
+  &__meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    color: $text-dim;
+    flex-wrap: wrap;
+
+    span {
+      padding: 4px 10px;
+      background: $surface2;
+      border: 1px solid $border;
+      border-radius: 5px;
+    }
+  }
+
+  // ── Upload ──────────────────────────────────────────────────────────────────
+  &__upload-zone {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px;
+    cursor: pointer;
+
+    &:hover .excel-reader__drop-area {
+      border-color: $accent;
+      background: rgba(79, 142, 247, 0.04);
+    }
+  }
+
+  &__drop-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    width: 100%;
+    max-width: 520px;
+    padding: 72px 48px;
+    border: 2px dashed $border;
+    border-radius: 18px;
+    background: $surface;
+    transition:
+      border-color 0.2s,
+      background 0.2s;
+    text-align: center;
+
+    &.dragging {
+      border-color: $accent;
+      background: rgba(79, 142, 247, 0.08);
+    }
+  }
+
+  &__upload-icon {
+    width: 72px;
+    height: 72px;
+    background: linear-gradient(
+      135deg,
+      rgba($accent, 0.15),
+      rgba($accent2, 0.15)
+    );
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    border: 1px solid rgba($accent, 0.2);
+  }
+
+  &__upload-text {
+    font-family: "Syne", sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: $text;
+    letter-spacing: -0.4px;
+  }
+
+  &__upload-hint {
+    font-size: 13px;
+    color: $text-dim;
+    line-height: 1.7;
+    strong {
+      color: $accent;
+      font-weight: 500;
+    }
+  }
+
+  &__file-input {
+    display: none;
+  }
+
+  &__btn {
+    padding: 10px 22px;
+    background: rgba($accent, 0.1);
+    border: 1px solid rgba($accent, 0.3);
+    color: $accent;
+    border-radius: 7px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition:
+      background 0.15s,
+      border-color 0.15s,
+      transform 0.1s;
+    letter-spacing: 0.2px;
+
+    &:hover {
+      background: rgba($accent, 0.18);
+      border-color: $accent;
+      transform: translateY(-1px);
+    }
+    &:active {
+      transform: translateY(0);
+    }
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    &--secondary {
+      background: $surface2;
+      border: 1px solid $border;
+      color: $text-dim;
+      &:hover {
+        border-color: rgba($accent, 0.3);
+        color: $text;
+        background: $surface2;
+      }
+    }
+  }
+
+  // ── Toolbar ─────────────────────────────────────────────────────────────────
+  &__toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 20px;
+    background: $surface;
+    border-bottom: 1px solid $border;
+    flex-shrink: 0;
+    gap: 12px;
+
+    &-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    &-info {
+      font-size: 12px;
+      color: $text-dim;
+      strong {
+        color: $text;
+        font-weight: 500;
+      }
+    }
+  }
+
+  // ── Table wrapper ────────────────────────────────────────────────────────────
+  &__table-wrapper {
+    flex: 1;
+    overflow: auto;
+    position: relative;
+
+    &::-webkit-scrollbar {
+      width: 9px;
+      height: 9px;
+    }
+    &::-webkit-scrollbar-track {
+      background: $header-bg;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: $border;
+      border-radius: 5px;
+      &:hover {
+        background: $text-dim;
+      }
+    }
+  }
+
+  // ── Table ────────────────────────────────────────────────────────────────────
+  // NOTE: NO table-layout:fixed — it conflicts with width:max-content and
+  //       causes browser to ignore colgroup widths, breaking left offsets.
+  //       Frozen column widths are enforced via min-width+max-width on th/td.
+  &__table {
+    border-collapse: separate;
+    border-spacing: 0;
+    width: max-content;
+    min-width: 100%;
+  }
+
+  &__thead {
+    position: sticky;
+    top: 0;
+    z-index: 30;
+  }
+
+  // ── TH — header row 1 ────────────────────────────────────────────────────────
+  &__th {
+    background: $header-bg;
+    color: $text-dim;
+    font-size: 11px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.9px;
+    padding: 14px 18px;
+    border-right: 1px solid $border;
+    border-bottom: 1px solid $frozen-border;
+    white-space: nowrap;
+    text-align: left;
+    user-select: none;
+    height: $row1-h;
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+
+    &--rownum {
+      position: sticky;
+      left: 0;
+      z-index: 42;
+      @include lock-width($w-rownum);
+      text-align: center;
+      border-right: 1px solid $frozen-border;
+    }
+    &--f1 {
+      position: sticky;
+      left: $left-f1;
+      z-index: 41;
+      @include lock-width($w-f1);
+      border-right: 1px solid $frozen-border;
+    }
+    &--f2 {
+      position: sticky;
+      left: $left-f2;
+      z-index: 41;
+      @include lock-width($w-f2);
+      border-right: 1px solid $frozen-border;
+    }
+    &--f3 {
+      position: sticky;
+      left: $left-f3;
+      z-index: 41;
+      @include lock-width($w-f3);
+      border-right: 2px solid $frozen-border; // thick divider — last frozen
+    }
+    // scrollable columns — just a min-width
+    &:not(&--rownum):not(&--f1):not(&--f2):not(&--f3) {
+      min-width: $w-rest;
+    }
+  }
+
+  // ── TH2 — header row 2 ───────────────────────────────────────────────────────
+  &__th2 {
+    background: $header2-bg;
+    color: $text;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 10px 18px;
+    border-right: 1px solid $border;
+    border-bottom: 2px solid $frozen-border;
+    white-space: nowrap;
+    text-align: left;
+    user-select: none;
+    height: $row2-h;
+    overflow: hidden;
+    position: sticky;
+    top: $row1-h;
+    z-index: 2;
+
+    &--rownum {
+      position: sticky;
+      left: 0;
+      z-index: 42;
+      @include lock-width($w-rownum);
+      text-align: center;
+      border-right: 1px solid $frozen-border;
+      color: $text-dim;
+      font-size: 11px;
+    }
+    &--f1 {
+      position: sticky;
+      left: $left-f1;
+      z-index: 41;
+      @include lock-width($w-f1);
+      border-right: 1px solid $frozen-border;
+      background: $header2-bg;
+    }
+    &--f2 {
+      position: sticky;
+      left: $left-f2;
+      z-index: 41;
+      @include lock-width($w-f2);
+      border-right: 1px solid $frozen-border;
+      background: $header2-bg;
+    }
+    &--f3 {
+      position: sticky;
+      left: $left-f3;
+      z-index: 41;
+      @include lock-width($w-f3);
+      border-right: 2px solid $frozen-border;
+      background: $header2-bg;
+    }
+  }
+
+  // ── TR — alternating rows; frozen cells always solid bg ──────────────────────
+  &__tr {
+    &:nth-child(even) td {
+      background: $row-alt;
+    }
+    &:hover td {
+      background: $row-hover;
+    }
+
+    // solid backgrounds for frozen cells — prevents rgba bleed-through
+    td.excel-reader__td--rownum,
+    td.excel-reader__td--f1,
+    td.excel-reader__td--f2,
+    td.excel-reader__td--f3 {
+      background: $frozen-bg !important;
+    }
+
+    &:nth-child(even) {
+      td.excel-reader__td--rownum,
+      td.excel-reader__td--f1,
+      td.excel-reader__td--f2,
+      td.excel-reader__td--f3 {
+        background: $frozen-alt !important;
+      }
+    }
+
+    &:hover {
+      td.excel-reader__td--rownum,
+      td.excel-reader__td--f1,
+      td.excel-reader__td--f2,
+      td.excel-reader__td--f3 {
+        background: $frozen-hover !important;
+      }
+    }
+  }
+
+  // ── TD ───────────────────────────────────────────────────────────────────────
+  &__td {
+    padding: 0;
+    border-right: 1px solid rgba($border, 0.5);
+    border-bottom: 1px solid rgba($border, 0.3);
+    font-size: 14px;
+    color: $text;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: default;
+    height: 48px;
+    overflow: hidden;
+    // NO position/z-index on base td — setting position:relative creates a
+    // stacking context that lets scrollable cells float above sticky frozen ones
+
+    &--rownum {
+      position: sticky;
+      left: 0;
+      z-index: 22;
+      background: $frozen-bg;
+      @include lock-width($w-rownum);
+      text-align: center;
+      border-right: 1px solid $frozen-border;
+      font-size: 11px;
+      color: $text-dim;
+    }
+    &--f1 {
+      position: sticky;
+      left: $left-f1;
+      z-index: 21;
+      background: $frozen-bg;
+      @include lock-width($w-f1);
+      border-right: 1px solid $frozen-border;
+    }
+    &--f2 {
+      position: sticky;
+      left: $left-f2;
+      z-index: 21;
+      background: $frozen-bg;
+      @include lock-width($w-f2);
+      border-right: 1px solid $frozen-border;
+    }
+    &--f3 {
+      position: sticky;
+      left: $left-f3;
+      z-index: 21;
+      background: $frozen-bg;
+      @include lock-width($w-f3);
+      border-right: 2px solid $frozen-border;
+    }
+
+    &--editing {
+      padding: 0 !important;
+    }
+  }
+
+  // ── Cell content ─────────────────────────────────────────────────────────────
+  &__cell-content {
+    padding: 10px 18px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    line-height: 1.4;
+    cursor: cell;
+  }
+
+  &__cell-input {
+    width: 100%;
+    height: 48px;
+    padding: 10px 16px;
+    background: rgba($accent, 0.08);
+    border: 2px solid $accent;
+    color: $text;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 14px;
+    outline: none;
+    border-radius: 0;
+    box-shadow:
+      inset 0 0 0 1px rgba($accent, 0.2),
+      0 0 14px rgba($accent, 0.15);
+    transition: box-shadow 0.15s;
+
+    &:focus {
+      box-shadow:
+        inset 0 0 0 1px rgba($accent, 0.4),
+        0 0 22px rgba($accent, 0.25);
+    }
+  }
+
+  // ── States ───────────────────────────────────────────────────────────────────
+  &__loading {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    color: $text-dim;
+    font-size: 14px;
+  }
+
+  &__spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid $border;
+    border-top-color: $accent;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+  }
+}
+
+.row-num {
+  font-size: 11px;
+  color: $text-dim;
+  user-select: none;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+// ── Sheet tabs ────────────────────────────────────────────────────────────────
+.excel-reader__sheets {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  padding: 0 16px;
+  background: #0d1018;
+  border-bottom: 1px solid #2a2f45;
+  flex-shrink: 0;
+  overflow-x: auto;
+  height: 40px;
+
+  &::-webkit-scrollbar {
+    height: 0;
+  }
+}
+
+.excel-reader__sheet-tab {
+  padding: 0 16px;
+  height: 40px;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  color: #6b7394;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition:
+    color 0.15s,
+    border-color 0.15s,
+    background 0.15s;
+  border-radius: 4px 4px 0 0;
+
+  &:hover {
+    color: #e8ecf4;
+    background: rgba(79, 142, 247, 0.06);
+  }
+
+  &--active {
+    color: #4f8ef7;
+    border-bottom-color: #4f8ef7;
+    background: rgba(79, 142, 247, 0.08);
+    font-weight: 500;
+  }
+}
+
+// ── JSON button ───────────────────────────────────────────────────────────────
+.excel-reader__btn--json {
+  background: rgba(79, 142, 247, 0.08);
+  border: 1px solid rgba(79, 142, 247, 0.25);
+  color: #4f8ef7;
+  font-size: 13px;
+  padding: 10px 22px;
+
+  &:hover {
+    background: rgba(79, 142, 247, 0.15);
+    border-color: #4f8ef7;
+    opacity: 1;
+    transform: translateY(-1px);
+  }
+}
+
+// ── JSON Modal ────────────────────────────────────────────────────────────────
+.excel-reader__modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  backdrop-filter: blur(2px);
+  animation: fadeIn 0.15s ease;
+}
+
+.excel-reader__modal {
+  background: #161a28;
+  border: 1px solid #2a2f45;
+  border-radius: 14px;
+  width: 100%;
+  max-width: 760px;
+  max-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.7);
+  overflow: hidden;
+  animation: slideUp 0.18s ease;
+
+  &-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    border-bottom: 1px solid #2a2f45;
+    flex-shrink: 0;
+    gap: 12px;
+  }
+
+  &-title {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 13px;
+    color: #6b7394;
+
+    strong {
+      color: #e8ecf4;
+      font-weight: 600;
+    }
+  }
+
+  &-close {
+    width: 30px;
+    height: 30px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid #2a2f45;
+    border-radius: 6px;
+    color: #6b7394;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition:
+      background 0.15s,
+      color 0.15s;
+    flex-shrink: 0;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: #e8ecf4;
+    }
+  }
+
+  &-body {
+    flex: 1;
+    overflow: auto;
+    padding: 20px;
+    margin: 0;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 12px;
+    line-height: 1.7;
+    color: #a8c4f0;
+    background: #0f1117;
+    white-space: pre;
+
+    &::-webkit-scrollbar {
+      width: 7px;
+      height: 7px;
+    }
+    &::-webkit-scrollbar-track {
+      background: #0f1117;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: #2a2f45;
+      border-radius: 4px;
+    }
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

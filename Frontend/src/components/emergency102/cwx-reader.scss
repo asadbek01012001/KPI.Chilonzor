@@ -1,0 +1,632 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap");
+
+// ── Tokens ────────────────────────────────────────────────────────────────────
+$bg: #080c14;
+$surface: #0e1422;
+$surface2: #131928;
+$border: #1e2640;
+$accent: #00d4aa;
+$accent2: #0099ff;
+$text: #dce8f5;
+$text-dim: #4a6080;
+$header-bg: #090d1a;
+$frozen-bg: #0b0f1e;
+$frozen-border: #1e3050;
+$row-hover: rgba(0, 212, 170, 0.05);
+$row-alt: rgba(255, 255, 255, 0.012);
+$frozen-alt: #0d1220;
+$frozen-hover: #101828;
+
+// Column widths
+$w-rownum: 56px;
+$w-B: 160px;
+$w-C: 280px;
+$w-W: 200px;
+$w-X: 200px;
+
+$row1-h: 48px;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.cwx-reader {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: $bg;
+  font-family: "IBM Plex Mono", monospace;
+  color: $text;
+  overflow: hidden;
+
+  // ── Header ──────────────────────────────────────────────────────────────────
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 28px;
+    background: $header-bg;
+    border-bottom: 1px solid $border;
+    flex-shrink: 0;
+    gap: 16px;
+
+    &-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    &-badge {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 12px;
+      background: rgba($accent, 0.08);
+      border: 1px solid rgba($accent, 0.2);
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      color: $accent;
+      letter-spacing: 1px;
+    }
+
+    &-dot {
+      width: 6px;
+      height: 6px;
+      background: $accent;
+      border-radius: 50%;
+      box-shadow: 0 0 8px $accent;
+    }
+
+    &-title {
+      font-family: "IBM Plex Sans", sans-serif;
+      font-size: 18px;
+      font-weight: 600;
+      color: $text;
+      letter-spacing: -0.3px;
+    }
+
+    &-sub {
+      font-size: 11px;
+      color: $text-dim;
+      margin-top: 2px;
+    }
+  }
+
+  &__meta {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    color: $text-dim;
+
+    span {
+      padding: 3px 9px;
+      background: $surface2;
+      border: 1px solid $border;
+      border-radius: 4px;
+    }
+  }
+
+  // ── Upload ──────────────────────────────────────────────────────────────────
+  &__upload-zone {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px;
+    cursor: pointer;
+
+    &:hover .cwx-reader__drop-area {
+      border-color: $accent;
+      background: rgba($accent, 0.03);
+    }
+  }
+
+  &__drop-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 480px;
+    padding: 64px 48px;
+    border: 1px dashed rgba($accent, 0.25);
+    border-radius: 12px;
+    background: $surface;
+    transition: border-color 0.2s, background 0.2s;
+    text-align: center;
+
+    &.dragging {
+      border-color: $accent;
+      background: rgba($accent, 0.06);
+    }
+  }
+
+  &__upload-icon {
+    width: 64px;
+    height: 64px;
+    background: rgba($accent, 0.08);
+    border: 1px solid rgba($accent, 0.15);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+  }
+
+  &__upload-cols {
+    display: flex;
+    gap: 8px;
+
+    span {
+      padding: 4px 12px;
+      background: rgba($accent2, 0.08);
+      border: 1px solid rgba($accent2, 0.2);
+      border-radius: 4px;
+      font-size: 13px;
+      font-weight: 600;
+      color: $accent2;
+      letter-spacing: 1px;
+    }
+  }
+
+  &__upload-text {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: $text;
+  }
+
+  &__upload-hint {
+    font-size: 12px;
+    color: $text-dim;
+    line-height: 1.7;
+    strong {
+      color: $accent;
+      font-weight: 500;
+    }
+  }
+
+  &__file-input {
+    display: none;
+  }
+
+  // ── Buttons ─────────────────────────────────────────────────────────────────
+  &__btn {
+    padding: 10px 22px;
+    background: rgba($accent, 0.1);
+    border: 1px solid rgba($accent, 0.3);
+    color: $accent;
+    border-radius: 7px;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.15s, border-color 0.15s, transform 0.1s;
+    letter-spacing: 0.2px;
+
+    &:hover {
+      background: rgba($accent, 0.18);
+      border-color: $accent;
+      transform: translateY(-1px);
+    }
+    &:active {
+      transform: translateY(0);
+    }
+
+    &--secondary {
+      background: $surface2;
+      border: 1px solid $border;
+      color: $text-dim;
+      &:hover {
+        border-color: rgba($accent, 0.3);
+        color: $text;
+        background: $surface2;
+      }
+    }
+
+    &--json {
+      background: rgba($accent2, 0.08);
+      border: 1px solid rgba($accent2, 0.25);
+      color: $accent2;
+      &:hover {
+        background: rgba($accent2, 0.15);
+        border-color: $accent2;
+      }
+    }
+
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      transform: none;
+    }
+  }
+
+  // ── Toolbar ─────────────────────────────────────────────────────────────────
+  &__toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 16px;
+    background: $surface;
+    border-bottom: 1px solid $border;
+    flex-shrink: 0;
+    gap: 12px;
+
+    &-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    &-info {
+      font-size: 11px;
+      color: $text-dim;
+      strong {
+        color: $text;
+        font-weight: 500;
+      }
+    }
+  }
+
+  // ── Sheet tabs ───────────────────────────────────────────────────────────────
+  &__sheets {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    padding: 0 16px;
+    background: #060a12;
+    border-bottom: 1px solid $border;
+    flex-shrink: 0;
+    height: 38px;
+    overflow-x: auto;
+    &::-webkit-scrollbar { height: 0; }
+  }
+
+  &__sheet-tab {
+    padding: 0 14px;
+    height: 38px;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid transparent;
+    color: $text-dim;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 11px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: color 0.15s, border-color 0.15s;
+
+    &:hover { color: $text; }
+    &--active { color: $accent; border-bottom-color: $accent; }
+  }
+
+  // ── Table wrapper ─────────────────────────────────────────────────────────────
+  &__table-wrapper {
+    flex: 1;
+    overflow: auto;
+
+    &::-webkit-scrollbar { width: 8px; height: 8px; }
+    &::-webkit-scrollbar-track { background: $header-bg; }
+    &::-webkit-scrollbar-thumb {
+      background: $border;
+      border-radius: 4px;
+      &:hover { background: $text-dim; }
+    }
+  }
+
+  // ── Table ────────────────────────────────────────────────────────────────────
+  &__table {
+    border-collapse: separate;
+    border-spacing: 0;
+    width: max-content;
+    min-width: 100%;
+  }
+
+  &__thead {
+    position: sticky;
+    top: 0;
+    z-index: 30;
+  }
+
+  // ── TH ───────────────────────────────────────────────────────────────────────
+  &__th {
+    background: $header-bg;
+    color: $text-dim;
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 13px 16px;
+    border-right: 1px solid $border;
+    border-bottom: 1px solid $frozen-border;
+    white-space: nowrap;
+    text-align: left;
+    user-select: none;
+    height: $row1-h;
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+
+    &--rownum {
+      position: sticky; left: 0; z-index: 42;
+      width: $w-rownum; min-width: $w-rownum; max-width: $w-rownum;
+      text-align: center;
+      border-right: 1px solid $frozen-border;
+    }
+    &--B {
+      position: sticky; left: $w-rownum; z-index: 41;
+      width: $w-B; min-width: $w-B; max-width: $w-B;
+      border-right: 1px solid $frozen-border;
+      color: lighten($accent, 10%);
+    }
+    &--C {
+      position: sticky; left: $w-rownum + $w-B; z-index: 41;
+      width: $w-C; min-width: $w-C; max-width: $w-C;
+      border-right: 1px solid $frozen-border;
+      color: $accent;
+    }
+    &--W {
+      position: sticky; left: $w-rownum + $w-B + $w-C; z-index: 41;
+      width: $w-W; min-width: $w-W; max-width: $w-W;
+      border-right: 1px solid $frozen-border;
+      color: $accent2;
+    }
+    &--X {
+      position: sticky; left: $w-rownum + $w-B + $w-C + $w-W; z-index: 41;
+      width: $w-X; min-width: $w-X; max-width: $w-X;
+      border-right: 2px solid $frozen-border;
+      color: $accent2;
+    }
+  }
+
+  // ── TR ───────────────────────────────────────────────────────────────────────
+  &__tr {
+    &:nth-child(even) td { background: $row-alt; }
+    &:hover td { background: $row-hover; }
+
+    td.cwx-reader__td--rownum,
+    td.cwx-reader__td--B,
+    td.cwx-reader__td--C,
+    td.cwx-reader__td--W,
+    td.cwx-reader__td--X { background: $frozen-bg !important; }
+
+    &:nth-child(even) {
+      td.cwx-reader__td--rownum,
+      td.cwx-reader__td--B,
+      td.cwx-reader__td--C,
+      td.cwx-reader__td--W,
+      td.cwx-reader__td--X { background: $frozen-alt !important; }
+    }
+
+    &:hover {
+      td.cwx-reader__td--rownum,
+      td.cwx-reader__td--B,
+      td.cwx-reader__td--C,
+      td.cwx-reader__td--W,
+      td.cwx-reader__td--X { background: $frozen-hover !important; }
+    }
+  }
+
+  // ── TD ───────────────────────────────────────────────────────────────────────
+  &__td {
+    padding: 0;
+    border-right: 1px solid rgba($border, 0.6);
+    border-bottom: 1px solid rgba($border, 0.4);
+    font-size: 13px;
+    color: $text;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: default;
+    height: 44px;
+    overflow: hidden;
+
+    &--rownum {
+      position: sticky; left: 0; z-index: 22;
+      background: $frozen-bg;
+      width: $w-rownum; min-width: $w-rownum; max-width: $w-rownum;
+      text-align: center;
+      border-right: 1px solid $frozen-border;
+      font-size: 10px;
+      color: $text-dim;
+    }
+    &--B {
+      position: sticky; left: $w-rownum; z-index: 21;
+      background: $frozen-bg;
+      width: $w-B; min-width: $w-B; max-width: $w-B;
+      border-right: 1px solid $frozen-border;
+    }
+    &--C {
+      position: sticky; left: $w-rownum + $w-B; z-index: 21;
+      background: $frozen-bg;
+      width: $w-C; min-width: $w-C; max-width: $w-C;
+      border-right: 1px solid $frozen-border;
+    }
+    &--W {
+      position: sticky; left: $w-rownum + $w-B + $w-C; z-index: 21;
+      background: $frozen-bg;
+      width: $w-W; min-width: $w-W; max-width: $w-W;
+      border-right: 1px solid $frozen-border;
+    }
+    &--X {
+      position: sticky; left: $w-rownum + $w-B + $w-C + $w-W; z-index: 21;
+      background: $frozen-bg;
+      width: $w-X; min-width: $w-X; max-width: $w-X;
+      border-right: 2px solid $frozen-border;
+    }
+
+    &--editing { padding: 0 !important; }
+  }
+
+  // ── Cell ─────────────────────────────────────────────────────────────────────
+  &__cell-content {
+    padding: 8px 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    line-height: 1.4;
+    cursor: cell;
+  }
+
+  &__cell-input {
+    width: 100%;
+    height: 44px;
+    padding: 8px 14px;
+    background: rgba($accent, 0.06);
+    border: 2px solid $accent;
+    color: $text;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 13px;
+    outline: none;
+    border-radius: 0;
+    box-shadow: 0 0 16px rgba($accent, 0.1);
+    transition: box-shadow 0.15s;
+    &:focus { box-shadow: 0 0 24px rgba($accent, 0.2); }
+  }
+
+  // ── States ───────────────────────────────────────────────────────────────────
+  &__loading {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    color: $text-dim;
+    font-size: 13px;
+  }
+
+  &__spinner {
+    width: 36px;
+    height: 36px;
+    border: 2px solid $border;
+    border-top-color: $accent;
+    border-radius: 50%;
+    animation: cwx-spin 0.8s linear infinite;
+  }
+
+  // ── Modal ────────────────────────────────────────────────────────────────────
+  &__modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    backdrop-filter: blur(3px);
+    animation: cwx-fade 0.15s ease;
+  }
+
+  &__modal {
+    background: $surface;
+    border: 1px solid $border;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 680px;
+    max-height: 78vh;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 32px 80px rgba(0, 0, 0, 0.8);
+    overflow: hidden;
+    animation: cwx-up 0.18s ease;
+
+    &-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 18px;
+      border-bottom: 1px solid $border;
+      flex-shrink: 0;
+      gap: 12px;
+    }
+
+    &-title {
+      font-size: 12px;
+      color: $text-dim;
+      strong { color: $text; }
+    }
+
+    &-close {
+      width: 28px;
+      height: 28px;
+      background: $surface2;
+      border: 1px solid $border;
+      border-radius: 5px;
+      color: $text-dim;
+      font-size: 12px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.15s, color 0.15s;
+      flex-shrink: 0;
+      &:hover { background: rgba(255, 255, 255, 0.08); color: $text; }
+    }
+
+    &-body {
+      flex: 1;
+      overflow: auto;
+      padding: 18px;
+      margin: 0;
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 12px;
+      line-height: 1.8;
+      color: #7ec8a0;
+      background: $bg;
+      white-space: pre;
+
+      &::-webkit-scrollbar { width: 6px; height: 6px; }
+      &::-webkit-scrollbar-track { background: $bg; }
+      &::-webkit-scrollbar-thumb { background: $border; border-radius: 3px; }
+    }
+  }
+}
+
+.cwx-row-num {
+  font-size: 10px;
+  color: #4a6080;
+  user-select: none;
+}
+
+@keyframes cwx-spin { to { transform: rotate(360deg); } }
+@keyframes cwx-fade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes cwx-up { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+// ── Datepicker ────────────────────────────────────────────────────────────────
+.cwx-reader__datepicker {
+  padding: 7px 12px;
+  background: #0e1422;
+  border: 1px solid rgba(0, 153, 255, 0.3);
+  border-radius: 7px;
+  color: #dce8f5;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 12px;
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+  height: 36px;
+
+  &:hover { border-color: rgba(0, 153, 255, 0.6); }
+  &:focus {
+    border-color: #0099ff;
+    box-shadow: 0 0 0 2px rgba(0, 153, 255, 0.15);
+  }
+
+  &::-webkit-calendar-picker-indicator {
+    filter: invert(0.6) sepia(1) saturate(3) hue-rotate(185deg);
+    cursor: pointer;
+    opacity: 0.7;
+    &:hover { opacity: 1; }
+  }
+  &::-webkit-datetime-edit { color: #dce8f5; }
+  &::-webkit-datetime-edit-fields-wrapper { padding: 0; }
+  &::-webkit-inner-spin-button { display: none; }
+}

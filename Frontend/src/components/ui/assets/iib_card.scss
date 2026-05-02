@@ -1,0 +1,244 @@
+$bg-primary: #1e293b;
+$bg-header: #1a2438;
+$bg-subheader: #151e32;
+$bg-row-even: #151e32;
+$bg-row-odd: #1a2438;
+$bg-row-hover: rgba(71, 85, 105, 0.5);
+
+$border-color: #475569;
+$border-cell: #334155;
+
+$text-yellow: #facc15;
+$text-red: #f87171;
+$text-cyan: #22d3ee;
+$text-cyan-light: #67e8f9;
+$text-emerald: #34d399;
+$text-white: #ffffff;
+$text-slate-200: #e2e8f0;
+$text-slate-300: #cbd5e1;
+$text-slate-400: #94a3b8;
+$text-yellow-300: #fde047;
+
+$themes: (
+  "green": (
+    from: #1a4a2e,
+    to: #0f2d1c,
+    icon-bg: #22c55e,
+    icon-shadow: rgba(34, 197, 94, 0.45),
+    score-bg: rgba(34, 197, 94, 0.12),
+    score-border: rgba(34, 197, 94, 0.35),
+    score-color: #4ade80,
+    rank-color: #4ade80,
+  ),
+  "orange": (
+    from: #5a3a00,
+    to: #3a2400,
+    icon-bg: #f59e0b,
+    icon-shadow: rgba(245, 158, 11, 0.45),
+    score-bg: rgba(245, 158, 11, 0.12),
+    score-border: rgba(245, 158, 11, 0.35),
+    score-color: #fbbf24,
+    rank-color: #fbbf24,
+  ),
+  "blue": (
+    from: #0f3352,
+    to: #071e33,
+    icon-bg: #3b82f6,
+    icon-shadow: rgba(59, 130, 246, 0.45),
+    score-bg: rgba(59, 130, 246, 0.12),
+    score-border: rgba(59, 130, 246, 0.35),
+    score-color: #60a5fa,
+    rank-color: #60a5fa,
+  ),
+  "teal": (
+    from: #0f3d33,
+    to: #072620,
+    icon-bg: #10b981,
+    icon-shadow: rgba(16, 185, 129, 0.45),
+    score-bg: rgba(16, 185, 129, 0.12),
+    score-border: rgba(16, 185, 129, 0.35),
+    score-color: #34d399,
+    rank-color: #34d399,
+  ),
+);
+
+.iib-card {
+  box-sizing: border-box;
+  width: 300px;
+  border-radius: 16px;
+  padding: 18px 20px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+
+  background: $bg-header;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
+  transition:
+    background 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.18s ease;
+
+  // ── Icon — ALWAYS themed ───────────────────────────────────
+  @each $name, $vars in $themes {
+    &--#{$name} .iib-card__icon-wrap {
+      background: map-get($vars, icon-bg);
+      box-shadow: 0 4px 12px map-get($vars, icon-shadow);
+    }
+  }
+
+  // ── Score — ALWAYS themed ──────────────────────────────────
+  @each $name, $vars in $themes {
+    &--#{$name} .iib-card__score {
+      background: map-get($vars, score-bg);
+      border-color: map-get($vars, score-border);
+      color: map-get($vars, score-color);
+    }
+  }
+
+  // ── Rank — ALWAYS themed ───────────────────────────────────
+  @each $name, $vars in $themes {
+    &--#{$name} .iib-card__rank {
+      color: map-get($vars, rank-color);
+
+      svg {
+        fill: map-get($vars, rank-color);
+      }
+    }
+  }
+
+  // ── Inactive hover ─────────────────────────────────────────
+  &:not(.iib-card--active):hover {
+    background: #1e2d45;
+    transform: translateY(-1px);
+  }
+
+  // ── Active — ONLY card bg changes ─────────────────────────
+  &--active {
+    transform: translateY(-2px);
+
+    &:hover {
+      transform: translateY(-3px);
+    }
+
+    @each $name, $vars in $themes {
+      &.iib-card--#{$name} {
+        background: linear-gradient(
+          145deg,
+          map-get($vars, from) 0%,
+          map-get($vars, to) 100%
+        );
+        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+      }
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0);
+    transition: background 0.18s ease;
+    pointer-events: none;
+  }
+  &:active::after {
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  // ── Elements ───────────────────────────────────────────────
+  &__header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 18px;
+    justify-content: space-between;
+  }
+
+  &__icon-wrap {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: box-shadow 0.3s ease;
+
+    svg {
+      width: 20px;
+      height: 20px;
+      color: #fff;
+    }
+  }
+
+  &__title {
+    font-size: 15px;
+    font-weight: 600;
+    color: $text-slate-200;
+    letter-spacing: 0.01em;
+    line-height: 1.2;
+  }
+
+  &__score {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1;
+    border-radius: 32px;
+    border: 1px solid transparent;
+    padding: 6px 12px;
+    white-space: nowrap;
+    transition:
+      background 0.3s ease,
+      border-color 0.3s ease,
+      color 0.3s ease;
+
+    &::after {
+      content: " ↗";
+      font-size: 12px;
+      opacity: 0.85;
+    }
+  }
+
+  &__count {
+    font-size: 36px;
+    font-weight: 700;
+    color: $text-white;
+    line-height: 1;
+    margin-bottom: 8px;
+    letter-spacing: -0.5px;
+  }
+
+  // ── Footer ─────────────────────────────────────────────────
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__label {
+    font-size: 13px;
+    color: rgba($text-slate-300, 0.55);
+    font-weight: 400;
+  }
+
+  // ── Rank ───────────────────────────────────────────────────
+  &__rank {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+    font-weight: 700;
+    transition: color 0.3s ease;
+
+    svg {
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+      transition: fill 0.3s ease;
+    }
+  }
+}

@@ -1,0 +1,66 @@
+.indicators_tab_layout {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  gap: 20px;
+  background: #111828;
+  border-radius: 10px;
+
+  .indicators_tab_sidebar {
+    width: 420px;
+    display: flex;
+    justify-content: end;
+
+    .indicators_tab_sidebar_content {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      overflow-y: auto;
+      background: rgba(17, 24, 40, 1);
+      border-radius: 14px;
+
+      .indicators_tab_sidebar_item {
+        cursor: pointer;
+        border-radius: 8px;
+        transition: all ease 0.5s;
+
+        &:hover {
+          background: rgba(36, 49, 77, 1);
+        }
+
+        .indicators_sidebar_item_circle {
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          background: rgba(106, 139, 253, 1);
+        }
+
+        .indicators_sidebar_item_title {
+          color: rgba(255, 255, 255, 0.5);
+          font-size: 14px;
+        }
+      }
+
+      .active_sidebar_item {
+        background: rgba(36, 49, 77, 1);
+
+        .indicators_sidebar_item_title {
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  .indicators_tab_body {
+    width: calc(100% - 420px);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+    .indicators_tab_body_content {
+      width: 100%;
+    }
+  }
+}

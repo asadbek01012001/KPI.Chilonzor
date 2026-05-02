@@ -1,0 +1,125 @@
+$bg-primary: #1e293b;
+$bg-header: #1a2438;
+$bg-subheader: #151e32;
+$bg-row-even: #151e32;
+$bg-row-odd: #1a2438;
+$bg-row-hover: rgba(71, 85, 105, 0.5);
+$border-color: #475569;
+$border-cell: #334155;
+$text-yellow: #facc15;
+$text-emerald: #34d399;
+$text-white: #ffffff;
+$text-slate-200: #e2e8f0;
+$text-slate-400: #94a3b8;
+
+.emg-container {
+  width: 100%;
+  max-height: 100%;
+  overflow: auto;
+  background: $bg-primary;
+  border: 1px solid $border-color;
+  border-radius: 8px;
+
+  .emg-main-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    table-layout: fixed;
+    color: $text-slate-200;
+    font-family: sans-serif;
+    font-size: 14px;
+
+    th,
+    td {
+      padding: 12px 15px;
+      border: 1px solid $border-cell;
+      text-align: center;
+      word-wrap: break-word;
+    }
+
+    .emg-sticky-col {
+      position: sticky;
+      z-index: 5;
+    }
+
+    .emg-col-tr {
+      left: 0;
+      width: 60px;
+      min-width: 60px;
+      background: $bg-subheader !important;
+      color: $text-slate-400;
+    }
+
+    .emg-col-name {
+      left: 50px;
+      width: 500px;
+      min-width: 500px;
+      background: $bg-subheader !important;
+      color: $text-emerald;
+      font-weight: 600;
+      text-align: left;
+      border-right: 2px solid $border-color;
+    }
+
+    .emg-col-data {
+      width: auto;
+      color: $text-yellow;
+    }
+
+    // 1-qator: top: 0 da qotadi
+    thead tr.emg-thead-row-1 th {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: $bg-header;
+      color: $text-yellow;
+      font-weight: 700;
+
+      &.emg-sticky-col {
+        z-index: 12;
+      }
+    }
+
+    // 2-qator: top inline style orqali dinamik beriladi
+    thead tr.emg-thead-row-2 th {
+      position: sticky;
+      // top: React style={{ top: subHeaderTop }} dan keladi
+      z-index: 9;
+      background: $bg-subheader;
+      color: $text-yellow;
+      font-weight: 700;
+    }
+
+    tbody tr:nth-child(even) {
+      background: $bg-row-even;
+      td:not(.emg-sticky-col) {
+        background: $bg-row-even;
+      }
+    }
+    tbody tr:nth-child(odd) {
+      background: $bg-row-odd;
+      td:not(.emg-sticky-col) {
+        background: $bg-row-odd;
+      }
+    }
+
+    tbody tr:hover td {
+      background: $bg-row-hover !important;
+    }
+
+    .emg-is-editing {
+      padding: 0;
+      input {
+        width: 100%;
+        height: 100%;
+        padding: 12px 15px;
+        background: #0f172a;
+        color: $text-white;
+        border: 2px solid $text-yellow;
+        outline: none;
+        box-sizing: border-box;
+        text-align: center;
+      }
+    }
+  }
+}

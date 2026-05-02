@@ -1,0 +1,30 @@
+.auth_app_layout {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+    url(../assets/images/bg_image.png);
+
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .auth_app_layout_body {
+    width: 606px;
+    height: 650px;
+    opacity: 1;
+    border-radius: 26px;
+
+    margin-top: 50px;
+
+    background: rgba(12, 31, 61, 1);
+    backdrop-filter: blur(35px);
+  }
+}

@@ -1,0 +1,69 @@
+// usersForm.scss - SODDA VERSIYA
+
+.custom-select-wrapper {
+  .uz-custom-select-group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    &__label {
+      font-size: 13px;
+      font-weight: 500;
+      color: #94a3b8;
+      margin-bottom: 2px;
+    }
+
+    &__field {
+      width: 100%;
+      padding: 12px 24px;
+      background-color: #1e293b !important;
+      border: 1.5px solid #334155 !important;
+      border-radius: 8px !important;
+      color: #ffffff !important;
+      font-size: 14px;
+      outline: none;
+      cursor: pointer;
+
+      // ✅ Selectning o'z strelkasi chiqadi
+      appearance: auto;
+
+      @supports (-webkit-appearance: none) {
+        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'/></svg>");
+        background-repeat: no-repeat;
+        background-position: right 12px center;
+        background-size: 16px;
+        appearance: none;
+        padding-right: 40px;
+      }
+
+      &:hover:not(:disabled) {
+        border-color: #475569 !important;
+      }
+
+      &:focus {
+        border-color: #22d3ee !important;
+        background-color: #1a2438 !important;
+        box-shadow: 0 0 0 3px rgba(34, 211, 238, 0.15) !important;
+      }
+
+      &:disabled {
+        opacity: 0.6;
+        background-color: #0f172a !important;
+        cursor: not-allowed;
+      }
+
+      option {
+        background-color: #1e293b;
+        color: #ffffff;
+        padding: 12px;
+      }
+    }
+
+    &__icons,
+    &__icon-left,
+    &__arrow {
+      display: none;
+    }
+  }
+}
