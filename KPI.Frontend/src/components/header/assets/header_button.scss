@@ -1,0 +1,13 @@
+.header_button {
+  width: 48px;
+  height: 48px;
+  border-radius: 50px;
+  background-color: #093259;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: 991px) { width: 38px; height: 38px; }
+  @media (max-width: 767px) { width: 32px; height: 32px; }
+}

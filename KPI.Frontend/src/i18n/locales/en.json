@@ -1,0 +1,59 @@
+{
+  "sidebar": {
+    "dashboard": "Dashboard",
+    "performance": "Performance",
+    "reports": "Reports",
+    "emergencyCrimes": "102 & Crimes",
+    "emergency102": "102",
+    "crimes": "Crimes",
+    "indicators": "Indicators",
+    "users": "Users"
+  },
+  "dashboard": {
+    "regions": "Mahallas",
+    "organs": "IIB",
+    "directions": "Directions",
+    "startDate": "Start date",
+    "endDate": "End date",
+    "overallRating": "Overall rating",
+    "mahallaTable": "Mahalla table",
+    "totalMahallas": "Total mahallas",
+    "topMahallas": "TOP MAHALLAS",
+    "crimeRating": "Crime rating",
+    "crimeStats": "Crime statistics",
+    "mostCrimes": "MOST CRIMES",
+    "ratingOf102": "102 rating",
+    "callStats": "Call statistics",
+    "mostCalls": "MOST CALLS",
+    "sector": "Sector",
+    "rank": "Rank",
+    "totalScore": "Total score",
+    "mahallasCount": "MFY count",
+    "activeMfy": "Active MFY",
+    "top": "TOP",
+    "mahallas": "Mahallas"
+  },
+  "auth": {
+    "system": "Performance Indicators System",
+    "loginTitle": "SIGN IN",
+    "username": "Username",
+    "usernamePlaceholder": "Enter username",
+    "password": "Password",
+    "passwordPlaceholder": "Enter password",
+    "signIn": "Sign in",
+    "copyright": "© 2026 — Chilanzar District IIB",
+    "usernameRequired": "Username is required",
+    "passwordRequired": "Password is required"
+  },
+  "common": {
+    "loading": "Loading...",
+    "save": "Save",
+    "update": "Update",
+    "submitting": "Submitting..."
+  },
+  "reports": {
+    "oneDay": "One day",
+    "timePeriod": "Time period",
+    "delete": "Delete"
+  }
+}

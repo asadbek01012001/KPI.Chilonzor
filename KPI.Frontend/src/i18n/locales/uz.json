@@ -1,0 +1,59 @@
+{
+  "sidebar": {
+    "dashboard": "Дашбоард",
+    "performance": "Самарадорлик",
+    "reports": "Хисоботлар",
+    "emergencyCrimes": "102 ва Жиноятлар",
+    "emergency102": "102",
+    "crimes": "Жиноятлар",
+    "indicators": "Кўрсаткичлар",
+    "users": "Фойдаланувчилар"
+  },
+  "dashboard": {
+    "regions": "Маҳаллалар",
+    "organs": "ИИБ",
+    "directions": "Йўналишлар",
+    "startDate": "Бошланғич сана",
+    "endDate": "Охирги сана",
+    "overallRating": "Умумий рейтинг",
+    "mahallaTable": "Маҳаллалар жадвали",
+    "totalMahallas": "Жами маҳаллалар",
+    "topMahallas": "TOP МАҲАЛЛАЛАР",
+    "crimeRating": "Жиноят рейтинги",
+    "crimeStats": "Жиноят статистикаси",
+    "mostCrimes": "КЎП ЖИНОЯТ",
+    "ratingOf102": "102 рейтинги",
+    "callStats": "Сўровлар статистикаси",
+    "mostCalls": "КЎП ЧАҚИРИҚ",
+    "sector": "Sektor",
+    "rank": "O'rni",
+    "totalScore": "To'plagan bali",
+    "mahallasCount": "MFYlar soni",
+    "activeMfy": "Faol MFY",
+    "top": "TOP",
+    "mahallas": "Mahallalar"
+  },
+  "auth": {
+    "system": "Самарадорлик кўрсаткичлари тизими",
+    "loginTitle": "ТИЗИМГА КИРИШ",
+    "username": "Фойдаланувчи номи",
+    "usernamePlaceholder": "Фойдаланувчи номини киритинг",
+    "password": "Пароль",
+    "passwordPlaceholder": "Паролни киритинг",
+    "signIn": "Кириш",
+    "copyright": "© 2026 — Чилонзор туман ИИБ",
+    "usernameRequired": "Фойдаланувчи номи majburiy",
+    "passwordRequired": "Parol majburiy"
+  },
+  "common": {
+    "loading": "Юкланмоқда...",
+    "save": "Сақлаш",
+    "update": "Янгилаш",
+    "submitting": "Юборилмоқда..."
+  },
+  "reports": {
+    "oneDay": "Бир кунлик",
+    "timePeriod": "Вақт оралиғи",
+    "delete": "Ўчириш"
+  }
+}

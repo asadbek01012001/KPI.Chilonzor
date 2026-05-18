@@ -1,0 +1,34 @@
+.sidebar_logout_wrapper {
+  width: 100%;
+  padding: 0 10px;
+
+  .sidebar_logout_button {
+    width: 100%;
+    border: 1px solid transparent;
+    border-left: 3px solid transparent;
+    background-color: transparent;
+    border-radius: 6px;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px 10px 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    .sidebar_logout_button_label {
+      color: #ffffff;
+      font-size: 16px;
+      font-family: Inter;
+    }
+
+    svg { width: 18px; height: 18px; flex-shrink: 0; }
+
+    &:hover {
+      background-color: rgba(25, 32, 51, 1);
+      border: 1px solid rgba(189, 63, 36, 0.8);
+      border-left: 3px solid rgba(189, 63, 36, 0.8);
+    }
+  }
+}

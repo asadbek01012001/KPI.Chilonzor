@@ -1,0 +1,8 @@
+.header_actions_wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  @media (max-width: 991px) { gap: 12px; }
+  @media (max-width: 767px) { gap: 8px; }
+}

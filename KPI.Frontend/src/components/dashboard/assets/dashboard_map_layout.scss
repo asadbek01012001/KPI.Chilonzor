@@ -1,0 +1,189 @@
+.dashboard_map_layout {
+  width: 100%;
+  height: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+
+  .dashboard_map_header {
+    flex-shrink: 0;
+    width: 100%;
+  }
+
+  .dashboard_map_content {
+    flex: 1;
+    min-height: 0;
+    display: flex;
+  }
+
+  .dashboard_map_body {
+    flex: 1;
+    min-height: 0;
+    height: 100%;
+  }
+
+  .dashboard_map_sidebar {
+    flex-shrink: 0;
+    overflow-y: auto;
+  }
+
+  @media (max-width: 1199px) { padding: 8px; }
+  @media (max-width: 767px)  { padding: 6px; }
+}
+
+// ── Dashboard map info card (top-right overlay) ───────────────────────────────
+.dash-info-card {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 50;
+  width: 240px;
+  background: rgba(10, 18, 40, 0.93);
+  border: 1px solid rgba(36, 115, 189, 0.35);
+  border-radius: 14px;
+  padding: 16px;
+  backdrop-filter: blur(24px);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(36, 115, 189, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  pointer-events: none;
+
+  .dic-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid rgba(71, 85, 105, 0.4);
+  }
+
+  .dic-badge {
+    width: 34px;
+    height: 34px;
+    flex-shrink: 0;
+    background: rgba(36, 115, 189, 0.16);
+    border: 1px solid rgba(36, 115, 189, 0.38);
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #4a9fe8;
+  }
+
+  .dic-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.25;
+  }
+
+  .dic-subtitle {
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.38);
+    margin-top: 2px;
+  }
+
+  .dic-stat {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 2px;
+  }
+
+  .dic-stat-label {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.48);
+  }
+
+  .dic-stat-value {
+    font-size: 22px;
+    font-weight: 800;
+    color: #22d3ee;
+    line-height: 1;
+    letter-spacing: -0.5px;
+  }
+
+  .dic-divider {
+    height: 1px;
+    background: rgba(71, 85, 105, 0.38);
+    margin: 12px 0 10px;
+  }
+
+  .dic-list-title {
+    font-size: 10px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.32);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 8px;
+  }
+
+  .dic-region-item {
+    display: flex;
+    align-items: center;
+    padding: 4px 0;
+    gap: 7px;
+
+    &:nth-child(1) .dic-region-rank { color: #fbbf24; }
+    &:nth-child(2) .dic-region-rank { color: #94a3b8; }
+    &:nth-child(3) .dic-region-rank { color: #b45309; }
+  }
+
+  .dic-region-rank {
+    font-size: 11px;
+    font-weight: 800;
+    min-width: 16px;
+    color: #64748b;
+    text-align: center;
+    flex-shrink: 0;
+  }
+
+  .dic-region-name {
+    flex: 1;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.7);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .dic-region-score {
+    font-size: 11px;
+    font-weight: 700;
+    color: #34d399;
+    min-width: 32px;
+    text-align: right;
+    flex-shrink: 0;
+  }
+
+  // Compact variant — for small grid cells (IIB 2×2)
+  &--sm {
+    width: 220px;
+    padding: 13px 15px;
+
+    .dic-header {
+      gap: 8px;
+      margin-bottom: 10px;
+      padding-bottom: 10px;
+    }
+    .dic-badge {
+      width: 30px;
+      height: 30px;
+      border-radius: 7px;
+      svg { width: 13px; height: 13px; }
+    }
+    .dic-title { font-size: 16px; }
+    .dic-subtitle { font-size: 14px; }
+    .dic-stat { margin-bottom: 3px; }
+    .dic-stat-label { font-size: 13px; }
+    .dic-stat-value { font-size: 15px; }
+    .dic-divider { margin: 8px 0 7px; }
+    .dic-list-title { font-size: 13px; margin-bottom: 6px; }
+    .dic-region-item { padding: 3px 0; gap: 5px; }
+    .dic-region-rank { font-size: 14px; min-width: 16px; }
+    .dic-region-name { font-size: 15px; }
+    .dic-region-score { font-size: 14px; min-width: 30px; }
+  }
+}

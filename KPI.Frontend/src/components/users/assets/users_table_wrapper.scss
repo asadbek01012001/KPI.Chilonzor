@@ -1,0 +1,171 @@
+.custom-add-button {
+  background-color: #3b4b8e !important;
+  border-color: #6d86f9 !important;
+  color: white !important;
+
+  &:hover {
+    border-color: #22d3ee !important;
+    filter: brightness(1.1);
+  }
+}
+
+// ── Toolbar ───────────────────────────────────────
+.users-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 100%;
+
+  &__btn-content {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  &__search {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    background: #1e293b;
+    border: 1px solid #475569;
+    border-radius: 6px;
+    padding: 0 11px;
+    height: 36px;
+    flex: 1;
+    max-width: 280px;
+    transition: border-color 0.2s;
+
+    &:focus-within {
+      border-color: #22d3ee;
+    }
+
+    svg {
+      color: #64748b;
+      flex-shrink: 0;
+    }
+
+    input {
+      background: transparent;
+      border: none;
+      outline: none;
+      color: #e2e8f0;
+      font-size: 14px;
+      flex: 1;
+      min-width: 0;
+
+      &::placeholder {
+        color: #475569;
+      }
+    }
+  }
+
+  &__select {
+    height: 36px;
+    background: #1e293b;
+    border: 1px solid #475569;
+    border-radius: 6px;
+    color: #cbd5e1;
+    font-size: 14px;
+    padding: 0 10px;
+    cursor: pointer;
+    outline: none;
+    min-width: 150px;
+    transition: border-color 0.2s;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2394a3b8' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    padding-right: 30px;
+
+    &:focus {
+      border-color: #22d3ee;
+    }
+
+    option {
+      background: #1e293b;
+      color: #cbd5e1;
+    }
+  }
+}
+
+// ── Body layout ───────────────────────────────────
+.users-body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+
+  &__table {
+    flex: 1;
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  &__pagination {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 4px 2px;
+    border-top: 1px solid #1e293b;
+  }
+}
+
+// ── Pagination ────────────────────────────────────
+.users-pagination {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  &__info {
+    color: #64748b;
+    font-size: 13px;
+  }
+
+  &__dots {
+    color: #475569;
+    font-size: 14px;
+    padding: 0 2px;
+    user-select: none;
+  }
+
+  &__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 32px;
+    height: 32px;
+    padding: 0 6px;
+    border-radius: 6px;
+    border: 1px solid #334155;
+    background: transparent;
+    color: #94a3b8;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.15s ease;
+
+    &:hover:not(:disabled) {
+      border-color: #22d3ee;
+      color: #22d3ee;
+      background: rgba(34, 211, 238, 0.08);
+    }
+
+    &:disabled {
+      opacity: 0.35;
+      cursor: not-allowed;
+    }
+
+    &--active {
+      background: #3b4b8e;
+      border-color: #6d86f9;
+      color: #ffffff;
+
+      &:hover:not(:disabled) {
+        background: #3b4b8e;
+        border-color: #22d3ee;
+        color: #ffffff;
+      }
+    }
+  }
+}

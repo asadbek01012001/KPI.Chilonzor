@@ -1,0 +1,72 @@
+.header_date_time_resources_warpper {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  color: white;
+  font-size: 14px;
+
+  @media (max-width: 1199px) { gap: 14px; }
+  @media (max-width: 991px)  { gap: 10px; }
+
+  .header_date_time_resources_day {
+    font-size: 20px;
+    margin-top: 15px;
+    min-width: 100px;
+    text-align: center;
+
+    @media (max-width: 1199px) { font-size: 16px; min-width: 80px; }
+    @media (max-width: 991px)  { display: none; }
+  }
+
+  .header_date_time_resources_calendar {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    gap: 5px;
+    min-width: 100px;
+    justify-content: center;
+
+    svg {
+      width: 25px;
+      height: 25px;
+    }
+
+    span {
+      font-family: "Courier New", monospace;
+      min-width: 75px;
+      text-align: center;
+      display: inline-block;
+      font-variant-numeric: tabular-nums;
+    }
+
+    @media (max-width: 1199px) { font-size: 15px; min-width: 80px; svg { width: 18px; height: 18px; } span { min-width: 60px; } }
+    @media (max-width: 991px)  { font-size: 13px; min-width: 70px; gap: 3px; svg { width: 16px; height: 16px; } span { min-width: 52px; } }
+    @media (max-width: 767px)  { display: none; }
+  }
+
+  .header_date_time_resources_time {
+    display: flex;
+    font-size: 20px;
+    align-items: center;
+    gap: 5px;
+    min-width: 90px;
+    justify-content: center;
+
+    svg {
+      width: 25px;
+      height: 25px;
+    }
+
+    span {
+      font-family: "Courier New", monospace;
+      min-width: 65px;
+      text-align: center;
+      display: inline-block;
+      font-variant-numeric: tabular-nums;
+    }
+
+    @media (max-width: 1199px) { font-size: 15px; min-width: 70px; svg { width: 18px; height: 18px; } span { min-width: 52px; } }
+    @media (max-width: 991px)  { font-size: 13px; min-width: 60px; gap: 3px; svg { width: 16px; height: 16px; } span { min-width: 45px; } }
+    @media (max-width: 767px)  { font-size: 12px; min-width: 50px; svg { width: 14px; height: 14px; } span { min-width: 38px; } }
+  }
+}

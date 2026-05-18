@@ -1,0 +1,755 @@
+2026-04-13 10:32:50 [[31merror[39m]: error: ���� ������ "KPI_DB" �� ����������
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async connectDB (D:\KPI\KPI.Backend\dist\config\database.js:41:20)
+    at async start (D:\KPI\KPI.Backend\dist\server.js:11:5)
+2026-04-13 10:59:32 [[31merror[39m]: error: неверный синтаксис для типа uuid: "by-its"
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.findById (D:\KPI\KPI.Backend\dist\modules\crimes\crime.repository.js:71:19)
+    at async Object.getById (D:\KPI\KPI.Backend\dist\modules\crimes\crime.service.js:8:40)
+    at async D:\KPI\KPI.Backend\dist\modules\crimes\crime.controller.js:22:76
+    at async D:\KPI\KPI.Backend\dist\modules\crimes\crime.controller.js:7:5
+2026-04-13 11:01:38 [[31merror[39m]: error: неверный синтаксис для типа uuid: "by-its"
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.findById (D:\KPI\KPI.Backend\dist\modules\crimes\crime.repository.js:71:19)
+    at async Object.getById (D:\KPI\KPI.Backend\dist\modules\crimes\crime.service.js:8:40)
+    at async D:\KPI\KPI.Backend\dist\modules\crimes\crime.controller.js:22:76
+    at async D:\KPI\KPI.Backend\dist\modules\crimes\crime.controller.js:7:5
+2026-04-13 11:34:33 [[31merror[39m]: TypeError: Cannot read properties of undefined (reading 'map')
+    at Object.getAll (D:\KPI\KPI.Backend\src\modules\its\its.service.ts:35:29)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at D:\KPI\KPI.Backend\src\modules\crimes\crime.controller.ts:18:18
+    at D:\KPI\KPI.Backend\src\modules\crimes\crime.controller.ts:9:7
+2026-04-13 11:41:21 [[31merror[39m]: TypeError: Cannot destructure property 'rows' of '(intermediate value)' as it is undefined.
+    at D:\KPI\KPI.Backend\src\modules\crimes\crime.controller.ts:19:13
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at D:\KPI\KPI.Backend\src\modules\crimes\crime.controller.ts:9:7
+2026-04-13 12:00:50 [[31merror[39m]: Error: timeout exceeded when trying to connect
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at runNextTicks (node:internal/process/task_queues:60:5)
+    at listOnTimeout (node:internal/timers:533:9)
+    at processTimers (node:internal/timers:507:7)
+    at D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:939:19
+    at async Promise.all (index 3)
+    at Object.chartDistrict (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:938:20)
+    at chartDistrict (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.controller.ts:119:24)
+2026-04-13 12:13:37 [[31merror[39m]: Error: Connection terminated due to connection timeout
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:939:19
+    at async Promise.all (index 15)
+    at Object.chartDistrict (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:938:20)
+    at chartDistrict (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.controller.ts:119:24)
+2026-04-13 12:17:03 [[31merror[39m]: Error: Connection terminated due to connection timeout
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:939:19
+    at async Promise.all (index 17)
+    at Object.chartDistrict (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:938:20)
+    at chartDistrict (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.controller.ts:119:24)
+2026-04-13 14:12:03 [[31merror[39m]: Error: timeout exceeded when trying to connect
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at runNextTicks (node:internal/process/task_queues:60:5)
+    at listOnTimeout (node:internal/timers:533:9)
+    at processTimers (node:internal/timers:507:7)
+    at D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:939:19
+    at async Promise.all (index 14)
+    at Object.chartDistrict (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:938:20)
+    at chartDistrict (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.controller.ts:119:24)
+2026-04-13 16:23:51 [[31merror[39m]: Error: timeout exceeded when trying to connect
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at runNextTicks (node:internal/process/task_queues:60:5)
+    at listOnTimeout (node:internal/timers:533:9)
+    at processTimers (node:internal/timers:507:7)
+    at D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:939:19
+    at async Promise.all (index 2)
+    at Object.chartDistrict (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:938:20)
+    at chartDistrict (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.controller.ts:119:24)
+2026-05-04 09:30:24 [[31merror[39m]: Error: timeout exceeded when trying to connect
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at runNextTicks (node:internal/process/task_queues:60:5)
+    at listOnTimeout (node:internal/timers:533:9)
+    at processTimers (node:internal/timers:507:7)
+    at D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:939:19
+    at async Promise.all (index 5)
+    at Object.chartDistrict (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:938:20)
+    at chartDistrict (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.controller.ts:119:24)
+2026-05-04 09:32:29 [[31merror[39m]: Error: timeout exceeded when trying to connect
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at runNextTicks (node:internal/process/task_queues:60:5)
+    at listOnTimeout (node:internal/timers:533:9)
+    at processTimers (node:internal/timers:507:7)
+    at D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:939:19
+    at async Promise.all (index 7)
+    at Object.chartDistrict (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:938:20)
+    at chartDistrict (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.controller.ts:119:24)
+2026-05-04 09:38:31 [[31merror[39m]: Error: timeout exceeded when trying to connect
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at runNextTicks (node:internal/process/task_queues:60:5)
+    at listOnTimeout (node:internal/timers:533:9)
+    at processTimers (node:internal/timers:507:7)
+    at D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:939:19
+    at async Promise.all (index 5)
+    at Object.chartDistrict (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:938:20)
+    at chartDistrict (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.controller.ts:119:24)
+2026-05-04 09:45:13 [[31merror[39m]: Error: Connection terminated due to connection timeout
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:939:19
+    at async Promise.all (index 10)
+    at Object.chartDistrict (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:938:20)
+    at chartDistrict (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.controller.ts:119:24)
+2026-05-04 09:45:54 [[31merror[39m]: Error: Connection terminated due to connection timeout
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:939:19
+    at async Promise.all (index 9)
+    at Object.chartDistrict (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:938:20)
+    at chartDistrict (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.controller.ts:119:24)
+2026-05-04 09:49:24 [[31merror[39m]: Error: timeout exceeded when trying to connect
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at runNextTicks (node:internal/process/task_queues:60:5)
+    at listOnTimeout (node:internal/timers:533:9)
+    at processTimers (node:internal/timers:507:7)
+    at D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:939:19
+    at async Promise.all (index 8)
+    at Object.chartDistrict (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:938:20)
+    at chartDistrict (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.controller.ts:119:24)
+2026-05-04 09:54:59 [[31merror[39m]: Error: timeout exceeded when trying to connect
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at runNextTicks (node:internal/process/task_queues:60:5)
+    at listOnTimeout (node:internal/timers:533:9)
+    at processTimers (node:internal/timers:507:7)
+    at D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:939:19
+    at async Promise.all (index 11)
+    at Object.chartDistrict (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:938:20)
+    at chartDistrict (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.controller.ts:119:24)
+2026-05-04 10:04:00 [[31merror[39m]: Error: timeout exceeded when trying to connect
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at runNextTicks (node:internal/process/task_queues:60:5)
+    at listOnTimeout (node:internal/timers:533:9)
+    at processTimers (node:internal/timers:507:7)
+    at D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:939:19
+    at async Promise.all (index 3)
+    at Object.chartDistrict (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:938:20)
+    at chartDistrict (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.controller.ts:119:24)
+2026-05-04 10:20:52 [[31merror[39m]: Error: timeout exceeded when trying to connect
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at runNextTicks (node:internal/process/task_queues:60:5)
+    at listOnTimeout (node:internal/timers:533:9)
+    at processTimers (node:internal/timers:507:7)
+    at D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:939:19
+    at async Promise.all (index 3)
+    at Object.chartDistrict (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:938:20)
+    at chartDistrict (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.controller.ts:119:24)
+2026-05-04 10:22:06 [[31merror[39m]: Error: Connection terminated due to connection timeout
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:939:19
+    at async Promise.all (index 16)
+    at Object.chartDistrict (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:938:20)
+    at chartDistrict (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.controller.ts:119:24)
+2026-05-04 10:28:37 [[31merror[39m]: Error: timeout exceeded when trying to connect
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at runNextTicks (node:internal/process/task_queues:60:5)
+    at listOnTimeout (node:internal/timers:533:9)
+    at processTimers (node:internal/timers:507:7)
+    at D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:939:19
+    at async Promise.all (index 7)
+    at Object.chartDistrict (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:938:20)
+    at chartDistrict (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.controller.ts:119:24)
+2026-05-04 11:02:06 [[31merror[39m]: Error: Connection terminated due to connection timeout
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:939:19
+    at async Promise.all (index 17)
+    at Object.chartDistrict (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:938:20)
+    at chartDistrict (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.controller.ts:119:24)
+2026-05-04 11:09:38 [[31merror[39m]: Error: timeout exceeded when trying to connect
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at runNextTicks (node:internal/process/task_queues:60:5)
+    at listOnTimeout (node:internal/timers:533:9)
+    at processTimers (node:internal/timers:507:7)
+    at D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:939:19
+    at async Promise.all (index 2)
+    at Object.chartDistrict (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:938:20)
+    at chartDistrict (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.controller.ts:119:24)
+2026-05-04 11:17:40 [[31merror[39m]: Error: timeout exceeded when trying to connect
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at runNextTicks (node:internal/process/task_queues:60:5)
+    at listOnTimeout (node:internal/timers:533:9)
+    at processTimers (node:internal/timers:507:7)
+    at D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:939:19
+    at async Promise.all (index 18)
+    at Object.chartDistrict (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:938:20)
+    at chartDistrict (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.controller.ts:119:24)
+2026-05-04 12:39:40 [[31merror[39m]: Error: timeout exceeded when trying to connect
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at runNextTicks (node:internal/process/task_queues:60:5)
+    at listOnTimeout (node:internal/timers:533:9)
+    at processTimers (node:internal/timers:507:7)
+    at D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:939:19
+    at async Promise.all (index 11)
+    at Object.chartDistrict (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:938:20)
+    at chartDistrict (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.controller.ts:119:24)
+2026-05-04 14:55:54 [[31merror[39m]: Error: timeout exceeded when trying to connect
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at runNextTicks (node:internal/process/task_queues:60:5)
+    at listOnTimeout (node:internal/timers:533:9)
+    at processTimers (node:internal/timers:507:7)
+    at D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:939:19
+    at async Promise.all (index 5)
+    at Object.chartDistrict (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:938:20)
+    at chartDistrict (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.controller.ts:119:24)
+2026-05-04 15:23:03 [[31merror[39m]: error: отношение "daily_region_scores" не существует
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.getAllMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:148:17)
+    at getMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.controller.ts:18:26)
+2026-05-04 15:23:03 [[31merror[39m]: error: отношение "daily_region_scores" не существует
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.getAllMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:148:17)
+    at getMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.controller.ts:18:26)
+2026-05-04 15:23:04 [[31merror[39m]: error: отношение "daily_region_scores" не существует
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.getAllMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:148:17)
+    at getMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.controller.ts:18:26)
+2026-05-04 15:25:36 [[31merror[39m]: error: отношение "daily_region_scores" не существует
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.getAllMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:148:17)
+    at getMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.controller.ts:18:26)
+2026-05-04 15:25:36 [[31merror[39m]: error: отношение "daily_region_scores" не существует
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.getAllMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:148:17)
+    at getMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.controller.ts:18:26)
+2026-05-04 15:25:37 [[31merror[39m]: error: отношение "daily_region_scores" не существует
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.getAllMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:148:17)
+    at getMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.controller.ts:18:26)
+2026-05-04 15:25:40 [[31merror[39m]: error: отношение "daily_region_scores" не существует
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.sectorSummary (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:256:17)
+    at sectorSummary (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.controller.ts:44:24)
+2026-05-04 15:25:40 [[31merror[39m]: error: отношение "daily_region_scores" не существует
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.getAllMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:148:17)
+    at getMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.controller.ts:18:26)
+2026-05-04 15:25:40 [[31merror[39m]: error: отношение "daily_region_scores" не существует
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.getAllMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:148:17)
+    at getMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.controller.ts:18:26)
+2026-05-04 15:25:40 [[31merror[39m]: error: отношение "daily_region_scores" не существует
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.getAllMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:148:17)
+    at getMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.controller.ts:18:26)
+2026-05-04 15:25:40 [[31merror[39m]: error: отношение "daily_region_scores" не существует
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.getAllMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:148:17)
+    at getMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.controller.ts:18:26)
+2026-05-04 15:25:40 [[31merror[39m]: error: отношение "daily_region_scores" не существует
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.sectorSummary (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:256:17)
+    at sectorSummary (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.controller.ts:44:24)
+2026-05-04 15:25:40 [[31merror[39m]: error: отношение "daily_region_scores" не существует
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.getAllMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:148:17)
+    at getMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.controller.ts:18:26)
+2026-05-04 15:25:40 [[31merror[39m]: error: отношение "daily_region_scores" не существует
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.getAllMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:148:17)
+    at getMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.controller.ts:18:26)
+2026-05-04 15:25:40 [[31merror[39m]: error: отношение "daily_region_scores" не существует
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.getAllMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:148:17)
+    at getMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.controller.ts:18:26)
+2026-05-04 15:25:40 [[31merror[39m]: error: отношение "daily_region_scores" не существует
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.getAllMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:148:17)
+    at getMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.controller.ts:18:26)
+2026-05-04 15:25:40 [[31merror[39m]: error: отношение "daily_region_scores" не существует
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.getAllMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:148:17)
+    at getMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.controller.ts:18:26)
+2026-05-04 15:25:41 [[31merror[39m]: error: отношение "daily_region_scores" не существует
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.getAllMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:148:17)
+    at getMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.controller.ts:18:26)
+2026-05-04 15:25:41 [[31merror[39m]: error: отношение "daily_region_scores" не существует
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.getAllMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:148:17)
+    at getMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.controller.ts:18:26)
+2026-05-04 15:25:41 [[31merror[39m]: error: отношение "daily_region_scores" не существует
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.getAllMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:148:17)
+    at getMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.controller.ts:18:26)
+2026-05-04 15:25:41 [[31merror[39m]: error: отношение "daily_region_scores" не существует
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.getAllMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:148:17)
+    at getMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.controller.ts:18:26)
+2026-05-04 15:25:41 [[31merror[39m]: error: отношение "daily_region_scores" не существует
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.getAllMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:148:17)
+    at getMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.controller.ts:18:26)
+2026-05-04 15:25:42 [[31merror[39m]: error: отношение "daily_region_scores" не существует
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.sectorSummary (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:256:17)
+    at sectorSummary (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.controller.ts:44:24)
+2026-05-04 15:25:42 [[31merror[39m]: error: отношение "daily_region_scores" не существует
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.getAllMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:148:17)
+    at getMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.controller.ts:18:26)
+2026-05-04 15:25:48 [[31merror[39m]: error: отношение "daily_region_scores" не существует
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.getAllMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:148:17)
+    at getMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.controller.ts:18:26)
+2026-05-04 15:25:49 [[31merror[39m]: error: отношение "daily_region_scores" не существует
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.getAllMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:148:17)
+    at getMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.controller.ts:18:26)
+2026-05-04 15:25:49 [[31merror[39m]: error: отношение "daily_region_scores" не существует
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.getAllMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:148:17)
+    at getMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.controller.ts:18:26)
+2026-05-04 15:28:02 [[31merror[39m]: error: отношение "daily_region_scores" не существует
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.getAllMahallaReport (D:\KPI\KPI.Backend\src\modules\reports\report.repository.ts:36:22)
+    at getMahallaReport (D:\KPI\KPI.Backend\src\modules\reports\report.controller.ts:24:24)
+2026-05-04 15:28:03 [[31merror[39m]: error: отношение "daily_region_scores" не существует
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.getAllMahallaReport (D:\KPI\KPI.Backend\src\modules\reports\report.repository.ts:36:22)
+    at getMahallaReport (D:\KPI\KPI.Backend\src\modules\reports\report.controller.ts:24:24)
+2026-05-04 15:28:03 [[31merror[39m]: error: отношение "daily_region_scores" не существует
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.getAllMahallaReport (D:\KPI\KPI.Backend\src\modules\reports\report.repository.ts:36:22)
+    at getMahallaReport (D:\KPI\KPI.Backend\src\modules\reports\report.controller.ts:24:24)
+2026-05-04 15:28:05 [[31merror[39m]: error: отношение "daily_region_scores" не существует
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.getAllMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:148:17)
+    at getMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.controller.ts:18:26)
+2026-05-04 15:28:06 [[31merror[39m]: error: отношение "daily_region_scores" не существует
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.getAllMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:148:17)
+    at getMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.controller.ts:18:26)
+2026-05-04 15:28:07 [[31merror[39m]: error: отношение "daily_region_scores" не существует
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.getAllMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:148:17)
+    at getMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.controller.ts:18:26)
+2026-05-04 15:28:08 [[31merror[39m]: error: отношение "daily_region_scores" не существует
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.sectorSummary (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:256:17)
+    at sectorSummary (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.controller.ts:44:24)
+2026-05-04 15:28:08 [[31merror[39m]: error: отношение "daily_region_scores" не существует
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.getAllMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:148:17)
+    at getMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.controller.ts:18:26)
+2026-05-04 15:28:08 [[31merror[39m]: error: отношение "daily_region_scores" не существует
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.getAllMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:148:17)
+    at getMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.controller.ts:18:26)
+2026-05-04 15:28:08 [[31merror[39m]: error: отношение "daily_region_scores" не существует
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.getAllMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:148:17)
+    at getMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.controller.ts:18:26)
+2026-05-04 15:28:08 [[31merror[39m]: error: отношение "daily_region_scores" не существует
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.getAllMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:148:17)
+    at getMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.controller.ts:18:26)
+2026-05-04 15:28:08 [[31merror[39m]: error: отношение "daily_region_scores" не существует
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.sectorSummary (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:256:17)
+    at sectorSummary (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.controller.ts:44:24)
+2026-05-04 15:28:08 [[31merror[39m]: error: отношение "daily_region_scores" не существует
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.getAllMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:148:17)
+    at getMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.controller.ts:18:26)
+2026-05-04 15:28:08 [[31merror[39m]: error: отношение "daily_region_scores" не существует
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.getAllMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:148:17)
+    at getMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.controller.ts:18:26)
+2026-05-04 15:28:08 [[31merror[39m]: error: отношение "daily_region_scores" не существует
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.getAllMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:148:17)
+    at getMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.controller.ts:18:26)
+2026-05-04 15:28:08 [[31merror[39m]: error: отношение "daily_region_scores" не существует
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.getAllMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:148:17)
+    at getMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.controller.ts:18:26)
+2026-05-04 15:28:09 [[31merror[39m]: error: отношение "daily_region_scores" не существует
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.sectorSummary (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:256:17)
+    at sectorSummary (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.controller.ts:44:24)
+2026-05-04 15:28:09 [[31merror[39m]: error: отношение "daily_region_scores" не существует
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.getAllMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:148:17)
+    at getMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.controller.ts:18:26)
+2026-05-04 15:28:09 [[31merror[39m]: error: отношение "daily_region_scores" не существует
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.getAllMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:148:17)
+    at getMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.controller.ts:18:26)
+2026-05-04 15:28:09 [[31merror[39m]: error: отношение "daily_region_scores" не существует
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.getAllMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:148:17)
+    at getMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.controller.ts:18:26)
+2026-05-04 15:28:09 [[31merror[39m]: error: отношение "daily_region_scores" не существует
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.getAllMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:148:17)
+    at getMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.controller.ts:18:26)
+2026-05-04 15:28:16 [[31merror[39m]: error: отношение "daily_region_scores" не существует
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.sectorSummary (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:256:17)
+    at sectorSummary (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.controller.ts:44:24)
+2026-05-04 15:28:16 [[31merror[39m]: error: отношение "daily_region_scores" не существует
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.getAllMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:148:17)
+    at getMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.controller.ts:18:26)
+2026-05-04 15:28:16 [[31merror[39m]: error: отношение "daily_region_scores" не существует
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.getAllMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:148:17)
+    at getMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.controller.ts:18:26)
+2026-05-04 15:28:16 [[31merror[39m]: error: отношение "daily_region_scores" не существует
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.getAllMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:148:17)
+    at getMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.controller.ts:18:26)
+2026-05-04 15:28:16 [[31merror[39m]: error: отношение "daily_region_scores" не существует
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.getAllMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:148:17)
+    at getMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.controller.ts:18:26)
+2026-05-04 15:28:17 [[31merror[39m]: error: отношение "daily_region_scores" не существует
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.sectorSummary (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:256:17)
+    at sectorSummary (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.controller.ts:44:24)
+2026-05-04 15:28:17 [[31merror[39m]: error: отношение "daily_region_scores" не существует
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.getAllMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:148:17)
+    at getMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.controller.ts:18:26)
+2026-05-04 15:28:17 [[31merror[39m]: error: отношение "daily_region_scores" не существует
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.getAllMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:148:17)
+    at getMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.controller.ts:18:26)
+2026-05-04 15:28:17 [[31merror[39m]: error: отношение "daily_region_scores" не существует
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.getAllMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:148:17)
+    at getMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.controller.ts:18:26)
+2026-05-04 15:28:17 [[31merror[39m]: error: отношение "daily_region_scores" не существует
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.getAllMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:148:17)
+    at getMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.controller.ts:18:26)
+2026-05-04 15:28:17 [[31merror[39m]: error: отношение "daily_region_scores" не существует
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.sectorSummary (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:256:17)
+    at sectorSummary (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.controller.ts:44:24)
+2026-05-04 15:28:17 [[31merror[39m]: error: отношение "daily_region_scores" не существует
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.getAllMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:148:17)
+    at getMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.controller.ts:18:26)
+2026-05-04 15:28:17 [[31merror[39m]: error: отношение "daily_region_scores" не существует
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.getAllMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:148:17)
+    at getMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.controller.ts:18:26)
+2026-05-04 15:28:17 [[31merror[39m]: error: отношение "daily_region_scores" не существует
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.getAllMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:148:17)
+    at getMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.controller.ts:18:26)
+2026-05-04 15:28:17 [[31merror[39m]: error: отношение "daily_region_scores" не существует
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.getAllMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:148:17)
+    at getMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.controller.ts:18:26)
+2026-05-04 15:28:19 [[31merror[39m]: error: отношение "daily_region_scores" не существует
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.getAllMahallaReport (D:\KPI\KPI.Backend\src\modules\reports\report.repository.ts:36:22)
+    at getMahallaReport (D:\KPI\KPI.Backend\src\modules\reports\report.controller.ts:24:24)
+2026-05-04 15:28:19 [[31merror[39m]: error: отношение "daily_region_scores" не существует
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.getAllMahallaReport (D:\KPI\KPI.Backend\src\modules\reports\report.repository.ts:36:22)
+    at getMahallaReport (D:\KPI\KPI.Backend\src\modules\reports\report.controller.ts:24:24)
+2026-05-04 15:28:19 [[31merror[39m]: error: отношение "daily_region_scores" не существует
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.getAllMahallaReport (D:\KPI\KPI.Backend\src\modules\reports\report.repository.ts:36:22)
+    at getMahallaReport (D:\KPI\KPI.Backend\src\modules\reports\report.controller.ts:24:24)
+2026-05-04 15:31:19 [[31merror[39m]: error: ���� ������ "KPI_DB" �� ����������
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Promise.all (index 0)
+    at Object.findAll (D:\KPI\KPI.Backend\src\modules\directions\direction.repository.ts:11:27)
+    at D:\KPI\KPI.Backend\src\modules\directions\direction.controller.ts:11:29
+    at D:\KPI\KPI.Backend\src\modules\directions\direction.controller.ts:6:70
+2026-05-04 15:31:19 [[31merror[39m]: error: ���� ������ "KPI_DB" �� ����������
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:769:19
+    at async Promise.all (index 4)
+    at Object.chartDistrict (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:768:20)
+    at chartDistrict (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.controller.ts:119:24)
+2026-05-04 15:31:19 [[31merror[39m]: error: ���� ������ "KPI_DB" �� ����������
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.getAllMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:148:17)
+    at getMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.controller.ts:18:26)
+2026-05-04 15:31:20 [[31merror[39m]: error: ���� ������ "KPI_DB" �� ����������
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:769:19
+    at async Promise.all (index 4)
+    at Object.chartDistrict (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:768:20)
+    at chartDistrict (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.controller.ts:119:24)
+2026-05-04 15:31:20 [[31merror[39m]: error: ���� ������ "KPI_DB" �� ����������
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Promise.all (index 0)
+    at Object.findAll (D:\KPI\KPI.Backend\src\modules\directions\direction.repository.ts:11:27)
+    at D:\KPI\KPI.Backend\src\modules\directions\direction.controller.ts:11:29
+    at D:\KPI\KPI.Backend\src\modules\directions\direction.controller.ts:6:70
+2026-05-04 15:31:20 [[31merror[39m]: error: ���� ������ "KPI_DB" �� ����������
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.info (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:551:20)
+    at info (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.controller.ts:92:24)
+2026-05-04 15:31:21 [[31merror[39m]: error: ���� ������ "KPI_DB" �� ����������
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.getAllMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:148:17)
+    at getMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.controller.ts:18:26)
+2026-05-04 15:31:21 [[31merror[39m]: error: ���� ������ "KPI_DB" �� ����������
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.info (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:551:20)
+    at info (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.controller.ts:92:24)
+2026-05-04 15:31:21 [[31merror[39m]: error: ���� ������ "KPI_DB" �� ����������
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:769:19
+    at async Promise.all (index 0)
+    at Object.chartDistrict (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:768:20)
+    at chartDistrict (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.controller.ts:119:24)
+2026-05-04 15:31:22 [[31merror[39m]: error: ���� ������ "KPI_DB" �� ����������
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Promise.all (index 1)
+    at Object.findAll (D:\KPI\KPI.Backend\src\modules\directions\direction.repository.ts:11:27)
+    at D:\KPI\KPI.Backend\src\modules\directions\direction.controller.ts:11:29
+    at D:\KPI\KPI.Backend\src\modules\directions\direction.controller.ts:6:70
+2026-05-04 15:31:22 [[31merror[39m]: error: ���� ������ "KPI_DB" �� ����������
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.getAllMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:148:17)
+    at getMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.controller.ts:18:26)
+2026-05-04 15:31:22 [[31merror[39m]: error: ���� ������ "KPI_DB" �� ����������
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.info (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:551:20)
+    at info (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.controller.ts:92:24)
+2026-05-04 15:31:23 [[31merror[39m]: error: ���� ������ "KPI_DB" �� ����������
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Promise.all (index 1)
+    at Object.findAll (D:\KPI\KPI.Backend\src\modules\directions\direction.repository.ts:11:27)
+    at D:\KPI\KPI.Backend\src\modules\directions\direction.controller.ts:11:29
+    at D:\KPI\KPI.Backend\src\modules\directions\direction.controller.ts:6:70
+2026-05-04 15:31:23 [[31merror[39m]: error: ���� ������ "KPI_DB" �� ����������
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.getAllMahallaReport (D:\KPI\KPI.Backend\src\modules\reports\report.repository.ts:16:20)
+    at getMahallaReport (D:\KPI\KPI.Backend\src\modules\reports\report.controller.ts:24:24)
+2026-05-04 15:31:24 [[31merror[39m]: error: ���� ������ "KPI_DB" �� ����������
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Promise.all (index 0)
+    at Object.findAll (D:\KPI\KPI.Backend\src\modules\directions\direction.repository.ts:11:27)
+    at D:\KPI\KPI.Backend\src\modules\directions\direction.controller.ts:11:29
+    at D:\KPI\KPI.Backend\src\modules\directions\direction.controller.ts:6:70
+2026-05-04 15:31:24 [[31merror[39m]: error: ���� ������ "KPI_DB" �� ����������
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.getAllMahallaReport (D:\KPI\KPI.Backend\src\modules\reports\report.repository.ts:16:20)
+    at getMahallaReport (D:\KPI\KPI.Backend\src\modules\reports\report.controller.ts:24:24)
+2026-05-04 15:31:24 [[31merror[39m]: error: ���� ������ "KPI_DB" �� ����������
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Promise.all (index 0)
+    at Object.findAll (D:\KPI\KPI.Backend\src\modules\directions\direction.repository.ts:11:27)
+    at D:\KPI\KPI.Backend\src\modules\directions\direction.controller.ts:11:29
+    at D:\KPI\KPI.Backend\src\modules\directions\direction.controller.ts:6:70
+2026-05-04 15:31:25 [[31merror[39m]: error: ���� ������ "KPI_DB" �� ����������
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.getAllMahallaReport (D:\KPI\KPI.Backend\src\modules\reports\report.repository.ts:16:20)
+    at getMahallaReport (D:\KPI\KPI.Backend\src\modules\reports\report.controller.ts:24:24)
+2026-05-04 15:34:05 [[31merror[39m]: error: отношение "daily_region_scores" не существует
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.getAllMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:148:17)
+    at getMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.controller.ts:18:26)
+2026-05-04 15:34:06 [[31merror[39m]: error: отношение "daily_region_scores" не существует
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.getAllMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:148:17)
+    at getMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.controller.ts:18:26)
+2026-05-04 15:34:06 [[31merror[39m]: error: отношение "daily_region_scores" не существует
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.getAllMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:148:17)
+    at getMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.controller.ts:18:26)
+2026-05-04 15:34:09 [[31merror[39m]: error: отношение "daily_region_scores" не существует
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.getAllMahallaReport (D:\KPI\KPI.Backend\src\modules\reports\report.repository.ts:36:22)
+    at getMahallaReport (D:\KPI\KPI.Backend\src\modules\reports\report.controller.ts:24:24)
+2026-05-04 15:34:09 [[31merror[39m]: error: отношение "daily_region_scores" не существует
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.getAllMahallaReport (D:\KPI\KPI.Backend\src\modules\reports\report.repository.ts:36:22)
+    at getMahallaReport (D:\KPI\KPI.Backend\src\modules\reports\report.controller.ts:24:24)
+2026-05-04 15:34:10 [[31merror[39m]: error: отношение "daily_region_scores" не существует
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.getAllMahallaReport (D:\KPI\KPI.Backend\src\modules\reports\report.repository.ts:36:22)
+    at getMahallaReport (D:\KPI\KPI.Backend\src\modules\reports\report.controller.ts:24:24)
+2026-05-04 15:34:14 [[31merror[39m]: error: отношение "daily_region_scores" не существует
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.getAllMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:148:17)
+    at getMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.controller.ts:18:26)
+2026-05-04 15:34:14 [[31merror[39m]: error: отношение "daily_region_scores" не существует
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.getAllMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:148:17)
+    at getMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.controller.ts:18:26)
+2026-05-04 15:34:15 [[31merror[39m]: error: отношение "daily_region_scores" не существует
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.getAllMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:148:17)
+    at getMahalla (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.controller.ts:18:26)
+2026-05-04 15:36:31 [[31merror[39m]: error: столбец "email" не существует
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.findByEmail (D:\KPI\KPI.Backend\src\modules\users\user.repository.ts:30:20)
+    at Object.login (D:\KPI\KPI.Backend\src\modules\auth\auth.service.ts:24:18)
+    at login (D:\KPI\KPI.Backend\src\modules\auth\auth.controller.ts:17:22)
+2026-05-04 15:36:39 [[31merror[39m]: error: столбец "email" не существует
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.findByEmail (D:\KPI\KPI.Backend\src\modules\users\user.repository.ts:30:20)
+    at Object.login (D:\KPI\KPI.Backend\src\modules\auth\auth.service.ts:24:18)
+    at login (D:\KPI\KPI.Backend\src\modules\auth\auth.controller.ts:17:22)
+2026-05-04 15:41:45 [[31merror[39m]: error: столбец "email" не существует
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.findByEmail (D:\KPI\KPI.Backend\src\modules\users\user.repository.ts:30:20)
+    at Object.login (D:\KPI\KPI.Backend\src\modules\auth\auth.service.ts:24:18)
+    at login (D:\KPI\KPI.Backend\src\modules\auth\auth.controller.ts:17:22)
+2026-05-04 15:41:54 [[31merror[39m]: error: столбец "email" не существует
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.findByEmail (D:\KPI\KPI.Backend\src\modules\users\user.repository.ts:30:20)
+    at Object.login (D:\KPI\KPI.Backend\src\modules\auth\auth.service.ts:24:18)
+    at login (D:\KPI\KPI.Backend\src\modules\auth\auth.controller.ts:17:22)
+2026-05-04 15:42:35 [[31merror[39m]: error: столбец "email" не существует
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.findByEmail (D:\KPI\KPI.Backend\src\modules\users\user.repository.ts:30:20)
+    at Object.login (D:\KPI\KPI.Backend\src\modules\auth\auth.service.ts:24:18)
+    at login (D:\KPI\KPI.Backend\src\modules\auth\auth.controller.ts:17:22)
+2026-05-04 15:42:42 [[31merror[39m]: error: столбец "name" в таблице "users" не существует
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async migrate (D:\KPI\KPI.Backend\src\config\migrate.ts:183:5)
+2026-05-04 15:44:43 [[31merror[39m]: error: в записи "new" нет поля "updated_at"
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.updateRefreshToken (D:\KPI\KPI.Backend\src\modules\users\user.repository.ts:65:5)
+    at Object.login (D:\KPI\KPI.Backend\src\modules\auth\auth.service.ts:34:5)
+    at login (D:\KPI\KPI.Backend\src\modules\auth\auth.controller.ts:17:22)
+2026-05-04 15:44:46 [[31merror[39m]: error: в записи "new" нет поля "updated_at"
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.updateRefreshToken (D:\KPI\KPI.Backend\src\modules\users\user.repository.ts:65:5)
+    at Object.login (D:\KPI\KPI.Backend\src\modules\auth\auth.service.ts:34:5)
+    at login (D:\KPI\KPI.Backend\src\modules\auth\auth.controller.ts:17:22)
+2026-05-04 16:13:32 [[31merror[39m]: Error: Connection terminated due to connection timeout
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:769:19
+    at async Promise.all (index 9)
+    at Object.chartDistrict (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.repository.ts:768:20)
+    at chartDistrict (D:\KPI\KPI.Backend\src\modules\dashboard\dashboard.controller.ts:119:24)
+2026-05-05 11:40:17 [[31merror[39m]: error: столбец "last_login_at" в таблице "users" не существует
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.updateLastLogin (D:\KPI\KPI.Backend\src\modules\users\user.repository.ts:94:5)
+    at async Promise.all (index 1)
+    at Object.login (D:\KPI\KPI.Backend\src\modules\auth\auth.service.ts:34:5)
+    at login (D:\KPI\KPI.Backend\src\modules\auth\auth.controller.ts:17:22)
+2026-05-05 11:40:26 [[31merror[39m]: error: столбец "last_login_at" в таблице "users" не существует
+    at D:\KPI\KPI.Backend\node_modules\pg-pool\index.js:45:11
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.updateLastLogin (D:\KPI\KPI.Backend\src\modules\users\user.repository.ts:94:5)
+    at async Promise.all (index 1)
+    at Object.login (D:\KPI\KPI.Backend\src\modules\auth\auth.service.ts:34:5)
+    at login (D:\KPI\KPI.Backend\src\modules\auth\auth.controller.ts:17:22)

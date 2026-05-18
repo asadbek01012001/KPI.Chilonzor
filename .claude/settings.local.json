@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Get-ChildItem -Path \"d:\\\\KPI\" -Recurse -Directory)",
+      "Bash(Select-Object -ExpandProperty FullName)",
+      "Bash(Sort-Object)",
+      "Bash(xargs grep *)",
+      "Bash(xargs ls *)",
+      "Bash(awk '{print $9}')",
+      "Bash(Get-ChildItem -Path \"d:\\\\KPI\\\\KPI.Frontend\\\\src\\\\store\\\\\" -Force)",
+      "Bash(npm install *)",
+      "Bash(node -e \"require\\('i18next'\\); console.log\\('ok'\\)\")",
+      "Bash(npx react-scripts *)",
+      "PowerShell(Get-ChildItem -Path \"d:\\\\KPI\\\\KPI.Backend\\\\\" -Recurse -File -Exclude node_modules | Where-Object { $_.FullName -notmatch 'node_modules' } | Select-Object -ExpandProperty FullName)",
+      "Bash(Copy-Item \"d:\\\\KPI\\\\Backend\\\\src\\\\config\\\\migrate_daily.ts\" \"d:\\\\KPI\\\\KPI.Backend\\\\src\\\\config\\\\migrate_daily.ts\" -Force)",
+      "PowerShell(Copy-Item \"d:\\\\KPI\\\\Backend\\\\src\\\\config\\\\migrate_daily.ts\" \"d:\\\\KPI\\\\KPI.Backend\\\\src\\\\config\\\\migrate_daily.ts\" -Force)",
+      "Bash(npm run *)",
+      "PowerShell(Get-Process -Name \"node\" -ErrorAction SilentlyContinue)",
+      "PowerShell(Stop-Process -Force)",
+      "Bash(npx tsc *)",
+      "PowerShell(python --version)",
+      "PowerShell(python -c \"import openpyxl; print\\('ok'\\)\")",
+      "PowerShell(pip install *)"
+    ]
+  }
+}

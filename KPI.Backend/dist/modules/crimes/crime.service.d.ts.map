@@ -1,0 +1,1 @@
+{"version":3,"file":"crime.service.d.ts","sourceRoot":"","sources":["../../../src/modules/crimes/crime.service.ts"],"names":[],"mappings":"AACA,OAAO,EACL,kBAAkB,EAClB,kBAAkB,EAClB,sBAAsB,EACvB,MAAM,aAAa,CAAC;AAIrB,eAAO,MAAM,YAAY;gBACX,sBAAsB;kBACd,MAAM;kBAKZ,kBAAkB;iBACb,MAAM,OAAO,kBAAkB;iBAK/B,MAAM;sBAIP,GAAG;;;CACtB,CAAC"}

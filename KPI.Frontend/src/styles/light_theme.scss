@@ -1,0 +1,165 @@
+// Light theme overrides — applied when <html data-theme="light">
+[data-theme="light"] {
+  // ── App layout ──────────────────────────────────────────
+  .app_layout_wrapper {
+    background-color: #e8edf5;
+
+    .app_layout_sidebar {
+      background-color: #1a2440;
+    }
+
+    .app_layout_pages_body {
+      background-color: #f1f5f9;
+    }
+  }
+
+  // ── Dashboard tab layout ─────────────────────────────────
+  .dashboard_tab_layout_header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e2e8f0;
+  }
+
+  .dashboard_tab_layout_body {
+    background-color: #f1f5f9;
+  }
+
+  // ── Dashboard map layout ─────────────────────────────────
+  .dashboard_map_layout {
+    background-color: #f8fafc;
+  }
+
+  // ── Buttons ──────────────────────────────────────────────
+  .app-btn--secondary {
+    background: #ffffff;
+    border-color: #cbd5e1;
+    color: #334155;
+
+    &:hover:not(:disabled) {
+      border-color: #0891b2;
+      color: #0f172a;
+      background: #f1f5f9;
+    }
+  }
+
+  // ── Inputs ───────────────────────────────────────────────
+  .uz-custom-input-group {
+    &__label { color: #475569; }
+
+    &__field {
+      background-color: #ffffff !important;
+      border-color: #cbd5e1 !important;
+      color: #0f172a !important;
+
+      &::placeholder { color: #94a3b8 !important; }
+
+      &:focus {
+        border-color: #0891b2 !important;
+        background-color: #f0f9ff !important;
+        box-shadow: 0 0 0 2px rgba(8, 145, 178, 0.15) !important;
+      }
+    }
+  }
+
+  // ── Auth ─────────────────────────────────────────────────
+  .auth_form_panel {
+    background: #ffffff;
+    border-left-color: #e2e8f0;
+  }
+
+  .auth_form_wrapper {
+    .auth_org_sub { color: rgba(15, 23, 42, 0.55); }
+
+    .auth_divider_line { background: rgba(8, 145, 178, 0.3); }
+    .auth_divider_text { color: #0891b2; }
+
+    .auth_form_body {
+      input {
+        background-color: #f8fafc !important;
+        border-color: #cbd5e1 !important;
+        color: #0f172a !important;
+
+        &::placeholder { color: #94a3b8 !important; }
+        &:focus {
+          border-color: #0891b2 !important;
+          background-color: #f0f9ff !important;
+        }
+      }
+      .uz-custom-input-group__label { color: #475569; }
+    }
+
+    .auth_footer_note { color: rgba(15, 23, 42, 0.35); }
+  }
+
+  // ── Tables ───────────────────────────────────────────────
+  .it-table-wrapper {
+    background-color: #ffffff;
+    border-color: #e2e8f0;
+  }
+
+  .it-th {
+    background-color: #f1f5f9 !important;
+    color: #334155 !important;
+    border-color: #e2e8f0 !important;
+  }
+
+  .it-td {
+    background-color: #ffffff !important;
+    color: #0f172a !important;
+    border-color: #f1f5f9 !important;
+
+    &--name { color: #0f172a !important; }
+  }
+
+  .it-tr:hover .it-td { background-color: #f8fafc !important; }
+
+  // ── Stat cards ───────────────────────────────────────────
+  .stat_card_wrapper {
+    background: linear-gradient(180deg, #ffffff 0%, #f1f5f9 100%);
+    border-color: #e2e8f0;
+
+    .stat_card_title { color: #475569; }
+    .stat_card_value { color: #0f172a; }
+  }
+
+  // ── Modal ────────────────────────────────────────────────
+  .eup-modal {
+    background: #ffffff;
+    border-color: #e2e8f0;
+
+    .eup-title { color: #0f172a; }
+    .eup-close { color: #64748b; &:hover { color: #0f172a; } }
+  }
+
+  // ── CrimeCard ────────────────────────────────────────────
+  .crime_card_wrapper {
+    background: #ffffff;
+    color: #0f172a;
+    border-color: #e2e8f0;
+  }
+
+  // ── Loading ──────────────────────────────────────────────
+  .loading-wrapper {
+    background: transparent;
+    .text-light { color: #334155 !important; }
+  }
+
+  // ── Dashboard info cards ─────────────────────────────────
+  .dash-info-card {
+    background: rgba(248, 250, 252, 0.97);
+    border-color: rgba(8, 145, 178, 0.25);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12), 0 0 0 1px rgba(8, 145, 178, 0.08);
+
+    .dic-title { color: #0f172a; }
+    .dic-subtitle { color: rgba(15, 23, 42, 0.5); }
+    .dic-stat-label { color: #475569; }
+    .dic-stat-value { color: #0891b2; }
+    .dic-list-title { color: rgba(15, 23, 42, 0.45); }
+    .dic-region-name { color: rgba(15, 23, 42, 0.8); }
+    .dic-divider { background: #e2e8f0; }
+    .dic-badge {
+      background: rgba(8, 145, 178, 0.1);
+      border-color: rgba(8, 145, 178, 0.3);
+      color: #0891b2;
+    }
+  }
+}

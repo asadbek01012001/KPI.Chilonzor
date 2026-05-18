@@ -1,0 +1,31 @@
+.sidebar_item_second {
+  width: 100%;
+  min-height: 32px;
+  padding: 9px 12px;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 5px;
+  color: #ffffff80;
+  margin: 1px 0;
+  cursor: pointer;
+  font-size: 15px;
+
+  transition: all 0.2s ease-in-out;
+
+  .sidebar_item_secund_custom_circle {
+    width: 8px;
+    flex-shrink: 0;
+
+    .custom_circle {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #6a8bfd;
+    }
+  }
+
+  &:hover { background: #24314d; }
+  &.active { background: #24314d; color: #ffffff; }
+}

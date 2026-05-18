@@ -1,0 +1,32 @@
+.header_profile_warpper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  .header_profile_info {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+
+    .header_profile_full_name {
+      color: #fff;
+      font-size: 22px;
+
+      @media (max-width: 1199px) { font-size: 18px; }
+      @media (max-width: 991px)  { font-size: 15px; }
+      @media (max-width: 767px)  { font-size: 14px; }
+    }
+
+    .header_profile_minitary_rank {
+      color: #fff;
+      opacity: 60%;
+      font-size: 13px;
+
+      @media (max-width: 767px) { font-size: 11px; }
+    }
+  }
+
+  @media (max-width: 767px) { gap: 7px; }
+}

@@ -1,0 +1,31 @@
+.tab_page_warpper {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  background: #111828;
+  border-radius: 10px;
+
+  .tab_page_header {
+    width: 100%;
+    height: 60px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+
+    @media (max-width: 991px) { height: 50px; }
+    @media (max-width: 767px) { height: 44px; }
+  }
+
+  .tab_page_body {
+    width: 100%;
+    height: calc(100% - 60px);
+    overflow: hidden;
+    overflow-y: auto;
+
+    @media (max-width: 991px) { height: calc(100% - 50px); }
+    @media (max-width: 767px) { height: calc(100% - 44px); }
+  }
+
+  @media (max-width: 991px) { padding: 12px; }
+  @media (max-width: 767px) { padding: 8px; border-radius: 8px; }
+}

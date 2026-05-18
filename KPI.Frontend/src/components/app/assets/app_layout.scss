@@ -1,0 +1,151 @@
+.app_layout_wrapper {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  background-color: #040b1c;
+
+  .app_layout_sidebar {
+    width: 282px;
+    height: 100%;
+    background-color: #111828;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+    z-index: 100;
+  }
+
+  .app-layout_pages {
+    width: calc(100% - 282px);
+    min-width: 0;
+    height: 100%;
+    padding: 10px;
+    position: relative;
+
+    .app_layout_pages_body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      overflow-y: auto;
+      backdrop-filter: blur(100px);
+      border-radius: 14px;
+      padding: 10px;
+    }
+  }
+
+  // ── 1200–1399px ──────────────────────────────────
+  @media (max-width: 1399px) {
+    .app_layout_sidebar {
+      width: 200px;
+    }
+    .app-layout_pages {
+      width: calc(100% - 200px);
+    }
+  }
+
+  // ── 992–1199px ───────────────────────────────────
+  @media (max-width: 1199px) {
+    .app_layout_sidebar {
+      width: 180px;
+    }
+    .app-layout_pages {
+      width: calc(100% - 180px);
+    }
+  }
+
+  // ── 768–991px (tablet) ───────────────────────────
+  @media (max-width: 991px) {
+    .app_layout_sidebar {
+      width: 160px;
+    }
+
+    .app-layout_pages {
+      width: calc(100% - 160px);
+      padding: 6px;
+
+      .app_layout_pages_body {
+        padding: 6px;
+        border-radius: 10px;
+      }
+    }
+  }
+
+  // ── <768px (mobile) – sidebar becomes overlay ────
+  @media (max-width: 767px) {
+    .app_layout_sidebar {
+      position: fixed;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 240px;
+      transform: translateX(-100%);
+      z-index: 1000;
+
+      &.sidebar--open {
+        transform: translateX(0);
+      }
+    }
+
+    .app-layout_pages {
+      width: 100%;
+      padding: 6px;
+
+      .app_layout_pages_body {
+        padding: 6px;
+        border-radius: 10px;
+      }
+    }
+  }
+}
+
+// ── Mobile sidebar overlay ────────────────────────
+.sidebar-overlay {
+  display: none;
+
+  @media (max-width: 767px) {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+
+    &.sidebar-overlay--active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+}
+
+// ── Hamburger button (mobile only) ───────────────
+.sidebar-menu-btn {
+  display: none;
+  position: fixed;
+  right: 14px;
+  top: 14px;
+  z-index: 1001;
+  width: 34px;
+  height: 34px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  background: rgba(34, 211, 238, 0.12);
+  border: 1px solid rgba(34, 211, 238, 0.28);
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 0;
+
+  span {
+    width: 16px;
+    height: 2px;
+    background: #22d3ee;
+    border-radius: 2px;
+    display: block;
+  }
+
+  @media (max-width: 767px) {
+    display: flex;
+  }
+}

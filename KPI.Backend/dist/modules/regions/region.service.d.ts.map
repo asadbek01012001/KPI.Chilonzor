@@ -1,0 +1,1 @@
+{"version":3,"file":"region.service.d.ts","sourceRoot":"","sources":["../../../src/modules/regions/region.service.ts"],"names":[],"mappings":"AACA,OAAO,EAAE,mBAAmB,EAAE,mBAAmB,EAAE,uBAAuB,EAAE,MAAM,cAAc,CAAC;AAGjG,eAAO,MAAM,aAAa;gBACZ,uBAAuB;;;;kBACf,MAAM;kBACZ,mBAAmB;iBACd,MAAM,OAAO,mBAAmB;iBAChC,MAAM;CAC1B,CAAC"}

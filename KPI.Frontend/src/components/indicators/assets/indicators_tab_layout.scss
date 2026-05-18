@@ -1,0 +1,105 @@
+.indicators_tab_layout {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  gap: 20px;
+  background: #111828;
+  border-radius: 10px;
+
+  .indicators_tab_sidebar {
+    width: 420px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: end;
+
+    .indicators_tab_sidebar_content {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      overflow-y: auto;
+      background: rgba(17, 24, 40, 1);
+      border-radius: 14px;
+
+      .indicators_tab_sidebar_item {
+        cursor: pointer;
+        border-radius: 8px;
+        transition: all ease 0.5s;
+
+        &:hover { background: rgba(36, 49, 77, 1); }
+
+        .indicators_sidebar_item_circle {
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          background: rgba(106, 139, 253, 1);
+        }
+
+        .indicators_sidebar_item_title {
+          color: rgba(255, 255, 255, 0.5);
+          font-size: 14px;
+        }
+      }
+
+      .active_sidebar_item {
+        background: rgba(36, 49, 77, 1);
+
+        .indicators_sidebar_item_title { color: #fff; }
+      }
+    }
+  }
+
+  .indicators_tab_body {
+    width: calc(100% - 420px);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+    .indicators_tab_body_content { width: 100%; }
+  }
+
+  // ── 1200–1399px ──────────────────────────────────
+  @media (max-width: 1399px) {
+    .indicators_tab_sidebar { width: 340px; }
+    .indicators_tab_body    { width: calc(100% - 340px); }
+  }
+
+  // ── 992–1199px ───────────────────────────────────
+  @media (max-width: 1199px) {
+    gap: 12px;
+    .indicators_tab_sidebar { width: 280px; }
+    .indicators_tab_body    { width: calc(100% - 280px); }
+    .indicators_sidebar_item_title { font-size: 13px !important; }
+  }
+
+  // ── 768–991px ────────────────────────────────────
+  @media (max-width: 991px) {
+    gap: 8px;
+    .indicators_tab_sidebar { width: 220px; }
+    .indicators_tab_body    { width: calc(100% - 220px); }
+    .indicators_sidebar_item_title { font-size: 12px !important; }
+  }
+
+  // ── <768px – stack vertically ────────────────────
+  @media (max-width: 767px) {
+    flex-direction: column;
+    overflow-y: auto;
+    height: auto;
+    min-height: 100%;
+
+    .indicators_tab_sidebar {
+      width: 100%;
+      height: 200px;
+      flex-shrink: 0;
+
+      .indicators_tab_sidebar_content { border-radius: 10px; }
+    }
+
+    .indicators_tab_body {
+      width: 100%;
+      height: auto;
+      flex: 1;
+    }
+  }
+}

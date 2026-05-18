@@ -1,0 +1,59 @@
+{
+  "sidebar": {
+    "dashboard": "Дашборд",
+    "performance": "Эффективность",
+    "reports": "Отчёты",
+    "emergencyCrimes": "102 и Преступления",
+    "emergency102": "102",
+    "crimes": "Преступления",
+    "indicators": "Показатели",
+    "users": "Пользователи"
+  },
+  "dashboard": {
+    "regions": "Махалли",
+    "organs": "ОВД",
+    "directions": "Направления",
+    "startDate": "Начальная дата",
+    "endDate": "Конечная дата",
+    "overallRating": "Общий рейтинг",
+    "mahallaTable": "Таблица махаллей",
+    "totalMahallas": "Всего махаллей",
+    "topMahallas": "ТОП МАХАЛЛИ",
+    "crimeRating": "Рейтинг преступности",
+    "crimeStats": "Статистика преступлений",
+    "mostCrimes": "БОЛЬШЕ ПРЕСТУПЛЕНИЙ",
+    "ratingOf102": "Рейтинг 102",
+    "callStats": "Статистика звонков",
+    "mostCalls": "БОЛЬШЕ ЗВОНКОВ",
+    "sector": "Сектор",
+    "rank": "Место",
+    "totalScore": "Итоговый балл",
+    "mahallasCount": "Кол-во МФЙ",
+    "activeMfy": "Активный МФЙ",
+    "top": "ТОП",
+    "mahallas": "Махалли"
+  },
+  "auth": {
+    "system": "Система показателей эффективности",
+    "loginTitle": "ВХОД В СИСТЕМУ",
+    "username": "Имя пользователя",
+    "usernamePlaceholder": "Введите имя пользователя",
+    "password": "Пароль",
+    "passwordPlaceholder": "Введите пароль",
+    "signIn": "Войти",
+    "copyright": "© 2026 — ОВД Чиланзарского района",
+    "usernameRequired": "Имя пользователя обязательно",
+    "passwordRequired": "Пароль обязателен"
+  },
+  "common": {
+    "loading": "Загрузка...",
+    "save": "Сохранить",
+    "update": "Обновить",
+    "submitting": "Отправка..."
+  },
+  "reports": {
+    "oneDay": "Один день",
+    "timePeriod": "Период времени",
+    "delete": "Удалить"
+  }
+}

@@ -1,0 +1,66 @@
+.uz-custom-input-group {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  box-sizing: border-box;
+
+  &__label {
+    font-size: 12px;
+    font-weight: 500;
+    color: #94a3b8;
+    margin-bottom: 1px;
+  }
+
+  &__wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  &__field {
+    width: 100%;
+    padding: 9px 14px;
+    background-color: #1e293b !important;
+    border: 1.5px solid #334155 !important;
+    border-radius: 6px !important;
+    color: #ffffff !important;
+    font-size: 14px;
+    outline: none;
+    box-sizing: border-box;
+    transition: all 0.2s ease-in-out;
+
+    &::placeholder { color: #64748b; }
+
+    &:hover:not(:disabled) { border-color: #475569 !important; }
+
+    &:focus {
+      border-color: #22d3ee !important;
+      background-color: #1a2438 !important;
+      box-shadow: 0 0 0 2px rgba(34, 211, 238, 0.15) !important;
+    }
+
+    &:disabled {
+      opacity: 0.6;
+      background-color: #0f172a !important;
+      cursor: not-allowed;
+    }
+  }
+
+  &__icon-right {
+    position: absolute;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #64748b;
+    pointer-events: none;
+    z-index: 2;
+
+    svg { width: 15px; height: 15px; }
+  }
+
+  &--has-icon .uz-custom-input-group__field { padding-right: 34px; }
+}
